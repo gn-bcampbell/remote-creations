@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default font pair */
+  --font-heading: "Book Antiqua", "Palatino Linotype", "Times New Roman", serif;
+  --font-body: "Helvetica Neue", "Avenir Next", "Segoe UI", Arial, sans-serif;
+
+  --brand-navy: 204 59% 15%;
+  --brand-teal: 191 59% 22%;
+  --brand-orange: 27 65% 47%;
+  --brand-forest: 139 32% 27%;
+  --brand-sand: 33 27% 96%;
+
+  --background: 0 0% 100%;
+  --foreground: 204 50% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 204 50% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 204 50% 15%;
+  --primary: 204 50% 15%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 30 33% 97%;
+  --secondary-foreground: 204 50% 15%;
+  --muted: 30 33% 97%;
+  --muted-foreground: 194 38% 32%;
+  --accent: 27 65% 47%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 204 30% 89%;
+  --input: 204 30% 89%;
+  --ring: 204 50% 15%;
+  --radius: 1rem;
+}
+/* ========================================
+   FONT STYLE PRESETS
+   Controlled via: <html data-font-style="">
+======================================== */
+
+/* Default System */
+html[data-font-style="default"] {
+  --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Gallery Modern (art gallery feel) */
+html[data-font-style="gallery"] {
+  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Friendly Studio (solo dev vibe) */
+html[data-font-style="friendly"] {
+  --font-heading: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Modern Tech */
+html[data-font-style="tech"] {
+  --font-heading: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+/* Editorial Serif */
+html[data-font-style="editorial"] {
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+/* Dev Mono */
+html[data-font-style="mono"] {
+  --font-heading: "JetBrains Mono", Menlo, monospace;
+  --font-body: system-ui, "Segoe UI", sans-serif;
+}
+
+/* Outdoor / Human (matches hiking brand tone) */
+html[data-font-style="outdoor"] {
+  --font-heading: "Gill Sans", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+/* Bold Display */
+html[data-font-style="bold"] {
+  --font-heading: Impact, "Arial Black", "Helvetica Neue", sans-serif;
+  --font-body: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Minimal Clean */
+html[data-font-style="minimal"] {
+  --font-heading: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Retro Modern */
+html[data-font-style="retro-modern"] {
+  --font-heading: "Futura", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-body: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Playful Clean */
+html[data-font-style="playful-clean"] {
+  --font-heading: "Nunito", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Quicksand", "Segoe UI", sans-serif;
+}
+
+/* Reading Focus */
+html[data-font-style="reading"] {
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+}
+
+.dark {
+  --brand-navy: 210 45% 94%;
+  --brand-teal: 190 26% 75%;
+  --brand-orange: 27 73% 60%;
+  --brand-forest: 140 18% 67%;
+  --brand-sand: 204 24% 16%;
+
+  --background: 204 44% 10%;
+  --foreground: 0 0% 98%;
+  --card: 204 44% 12%;
+  --card-foreground: 0 0% 98%;
+  --popover: 204 44% 12%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 204 50% 15%;
+  --secondary: 204 24% 18%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 204 24% 18%;
+  --muted-foreground: 201 22% 80%;
+  --accent: 27 65% 47%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 70% 44%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 205 25% 24%;
+  --input: 205 25% 24%;
+  --ring: 0 0% 98%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background font-body text-foreground antialiased;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(247, 245, 242, 0.35),
+    transparent 40%
+  );
+}
+
+.dark body {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(22, 39, 54, 0.55),
+    rgba(8, 16, 24, 0.25) 45%,
+    transparent 70%
+  );
+}
+
+a {
+  @apply outline-none;
+}
+
+::selection {
+  background: rgba(198, 107, 42, 0.2);
+  color: #0f2a3a;
+}

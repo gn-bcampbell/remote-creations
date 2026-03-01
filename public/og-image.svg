@@ -1,0 +1,8 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FAF9F7"/>
+  <rect x="80" y="80" width="1040" height="470" rx="32" fill="white" stroke="#D7E0E6"/>
+  <path d="M200 420L360 260L500 370L680 210L860 420" stroke="#0F2A3A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M240 500C340 440 460 440 560 500" stroke="#C66B2A" stroke-width="12" stroke-linecap="round"/>
+  <text x="200" y="220" fill="#0F2A3A" font-size="42" font-family="Georgia, serif">Remote Creations</text>
+  <text x="200" y="275" fill="#164B57" font-size="28" font-family="Arial, sans-serif">Freelance developer for reliable web products</text>
+</svg>

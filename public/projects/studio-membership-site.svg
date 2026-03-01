@@ -1,0 +1,12 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F7F5F2"/>
+  <rect x="84" y="76" width="1032" height="608" rx="26" fill="white" stroke="#D9E1E6"/>
+  <rect x="160" y="146" width="880" height="460" rx="24" fill="#F8FAFB"/>
+  <rect x="210" y="190" width="350" height="34" rx="17" fill="#EAF0F4"/>
+  <rect x="210" y="244" width="270" height="20" rx="10" fill="#EEF2F5"/>
+  <rect x="210" y="290" width="420" height="188" rx="20" fill="#EFF4F6"/>
+  <rect x="660" y="190" width="320" height="288" rx="20" fill="#EEF3F5"/>
+  <rect x="660" y="500" width="180" height="48" rx="24" fill="#C66B2A"/>
+  <path d="M700 432L760 366L805 410L860 338L920 432" stroke="#2E5A3D" stroke-width="8" stroke-linecap="round"/>
+  <text x="210" y="545" fill="#0F2A3A" font-size="34" font-family="Georgia, serif">Studio Membership Site</text>
+</svg>

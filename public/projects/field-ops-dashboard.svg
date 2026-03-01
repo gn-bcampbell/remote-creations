@@ -1,0 +1,14 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F7F5F2"/>
+  <rect x="84" y="76" width="1032" height="608" rx="26" fill="white" stroke="#D9E1E6"/>
+  <rect x="150" y="140" width="900" height="500" rx="22" fill="#F8FAFB"/>
+  <rect x="180" y="176" width="220" height="420" rx="16" fill="#EEF3F6"/>
+  <rect x="430" y="176" width="590" height="88" rx="16" fill="#ECF2F5"/>
+  <rect x="430" y="286" width="280" height="150" rx="16" fill="#EEF4F6"/>
+  <rect x="740" y="286" width="280" height="150" rx="16" fill="#EEF4F6"/>
+  <rect x="430" y="458" width="590" height="138" rx="16" fill="#F1F5F7"/>
+  <circle cx="240" cy="230" r="20" fill="#2E5A3D"/>
+  <circle cx="240" cy="290" r="20" fill="#0F2A3A"/>
+  <circle cx="240" cy="350" r="20" fill="#C66B2A"/>
+  <text x="430" y="550" fill="#0F2A3A" font-size="36" font-family="Georgia, serif">Field Ops Dashboard</text>
+</svg>

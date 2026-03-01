@@ -1,0 +1,11 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F7F5F2"/>
+  <rect x="84" y="76" width="1032" height="608" rx="26" fill="white" stroke="#D9E1E6"/>
+  <rect x="160" y="150" width="420" height="34" rx="17" fill="#EAF0F4"/>
+  <rect x="160" y="206" width="300" height="24" rx="12" fill="#EFF3F6"/>
+  <rect x="160" y="252" width="760" height="168" rx="20" fill="#F6F9FA"/>
+  <path d="M670 470L780 340L850 420L940 290L1030 470" stroke="#0F2A3A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M680 530C740 500 810 500 870 530" stroke="#C66B2A" stroke-width="8" stroke-linecap="round"/>
+  <text x="160" y="510" fill="#0F2A3A" font-size="36" font-family="Georgia, serif">Trailhead Bookings</text>
+  <text x="160" y="548" fill="#164B57" font-size="22" font-family="Arial, sans-serif">Booking flow redesign</text>
+</svg>
