@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { MarkdownInline } from "@/components/shared/markdown-content";
 import type { Project } from "@/content/projects";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,11 +29,13 @@ export function ProjectCard({ project }: { project: Project }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
-        <p className="text-sm text-brand-teal/85">{project.summary}</p>
+        <p className="text-sm text-brand-teal/85">
+          <MarkdownInline content={project.summary} />
+        </p>
         <ul className="space-y-1">
           {project.outcomes.slice(0, 2).map((outcome) => (
             <li key={outcome} className="text-sm text-brand-navy/90">
-              {outcome}
+              <MarkdownInline content={outcome} />
             </li>
           ))}
         </ul>

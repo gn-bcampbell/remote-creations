@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 
 export function HeroLargeTypography() {
   return (
-    <section className="relative overflow-hidden pb-16 pt-20 md:pb-24 md:pt-28">
+    <section className="relative overflow-hidden pb-16 pt-20 md:pb-2 md:pt-28">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(46,90,61,0.08),transparent_45%)]" />
       <div className="container relative space-y-10">
-        <BlurFade className="space-y-6" delay={0.05}>
+        <BlurFade className="space-y-6" delay={0.05} duration={1.8}>
           <p className="inline-flex rounded-full border border-brand-navy/10 bg-card px-3 py-1 text-xs uppercase tracking-[0.16em] text-brand-teal">
             Solo freelance developer
           </p>
@@ -21,7 +21,7 @@ export function HeroLargeTypography() {
           </p>
         </BlurFade>
 
-        <BlurFade className="flex flex-wrap gap-4" delay={0.18}>
+        <BlurFade className="flex flex-wrap gap-4" delay={0.24} duration={0.96}>
           <Button asChild size="lg" variant="accent">
             <Link href="/work">View Work</Link>
           </Button>

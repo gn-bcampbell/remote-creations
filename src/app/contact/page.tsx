@@ -37,18 +37,24 @@ export default function ContactPage() {
             <CardContent className="space-y-3 p-7">
               <h2 className="font-heading text-3xl text-brand-navy">Other ways to reach me</h2>
               <p className="text-brand-teal/85">
-                Prefer email? Use <Link href={`mailto:${siteConfig.email}`} className="text-brand-orange">{siteConfig.email}</Link>.
+                Prefer email? Use <Link href={`mailto:${siteConfig.email}`} className="text-brand-orange">{siteConfig.email}</Link>
               </p>
               <p className="text-brand-teal/85">
-                You can also connect on{" "}
+                Or connect on{" "}
                 <Link href={siteConfig.social.linkedin} className="text-brand-orange" target="_blank" rel="noreferrer">
                   LinkedIn
-                </Link>.
+                </Link>
+              </p>
+              <p className="text-brand-teal/85">
+                Checkout my {" "}
+                <Link href={siteConfig.social.github} className="text-brand-orange" target="_blank" rel="noreferrer">
+                  GitHub
+                </Link>
               </p>
             </CardContent>
           </Card>
 
-          <Card>
+          {/* <Card>
             <CardContent className="space-y-3 p-7">
               <h2 className="font-heading text-3xl text-brand-navy">What to expect</h2>
               <ul className="space-y-2 text-brand-teal/85">
@@ -57,7 +63,7 @@ export default function ContactPage() {
                 <li>3. You get clear next steps, scope outline, and timeline options.</li>
               </ul>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </Section>

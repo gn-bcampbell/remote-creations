@@ -1,0 +1,18 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#F7F5F2"/>
+  <rect x="84" y="76" width="1032" height="608" rx="26" fill="white" stroke="#D9E1E6"/>
+  <rect x="154" y="136" width="892" height="72" rx="20" fill="#EEF3F6"/>
+  <rect x="154" y="236" width="410" height="330" rx="24" fill="#F7FAFB"/>
+  <rect x="596" y="236" width="450" height="150" rx="24" fill="#EEF4F7"/>
+  <rect x="596" y="416" width="450" height="150" rx="24" fill="#F2F6F8"/>
+  <path d="M378 290C345 290 320 318 320 350C320 406 365 447 378 466C391 447 436 406 436 350C436 318 411 290 378 290Z" fill="#DCE8EC"/>
+  <path d="M378 320C359 320 346 336 346 355C346 389 372 414 378 426C384 414 410 389 410 355C410 336 397 320 378 320Z" fill="#0F2A3A"/>
+  <rect x="626" y="276" width="320" height="22" rx="11" fill="#D8E4E9"/>
+  <rect x="626" y="310" width="260" height="16" rx="8" fill="#E5EDF0"/>
+  <rect x="626" y="456" width="320" height="22" rx="11" fill="#D8E4E9"/>
+  <rect x="626" y="490" width="288" height="16" rx="8" fill="#E5EDF0"/>
+  <circle cx="974" cy="318" r="26" fill="#C66B2A"/>
+  <circle cx="974" cy="498" r="26" fill="#2E5A3D"/>
+  <text x="154" y="632" fill="#0F2A3A" font-size="36" font-family="Georgia, serif">Cloughoge Dental Practice</text>
+  <text x="154" y="670" fill="#164B57" font-size="22" font-family="Arial, sans-serif">Website redesign and patient-first content flow</text>
+</svg>
