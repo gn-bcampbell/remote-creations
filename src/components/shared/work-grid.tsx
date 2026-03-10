@@ -35,8 +35,8 @@ export function WorkGrid({ projects, categories }: WorkGridProps) {
             className={cn(
               "rounded-full",
               active === category
-                ? "bg-brand-navy text-white hover:bg-brand-teal"
-                : "border-brand-navy/20 bg-background text-brand-navy hover:bg-brand-navy/5"
+                ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                : "border-border bg-background text-foreground hover:bg-secondary"
             )}
             aria-pressed={active === category}
           >

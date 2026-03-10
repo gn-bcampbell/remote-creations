@@ -167,6 +167,11 @@ a {
 }
 
 ::selection {
-  background: rgba(198, 107, 42, 0.2);
-  color: #0f2a3a;
+  background: hsl(var(--brand-orange) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+.dark ::selection {
+  background: hsl(var(--brand-orange) / 0.5);
+  color: hsl(var(--foreground));
 }
