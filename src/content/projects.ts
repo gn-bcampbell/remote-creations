@@ -15,104 +15,140 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  //   {
+  //     slug: "trailhead-bookings",
+  //     title: "Trailhead Bookings",
+  //     summary:
+  //       "Booking flow redesign and performance improvements for a seasonal travel business.",
+  //     category: "Web App",
+  //     role: "Product-focused freelance developer",
+  //     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+  //     outcomes: [
+  //       "Reduced booking drop-off during checkout",
+  //       "Cut median page load times by over 35%",
+  //       "Improved maintainability with shared UI patterns",
+  //     ],
+  //     images: ["/projects/trailhead-bookings.svg"],
+  //     caseStudy: `## Overview
+  // A small travel operator needed a smoother way for customers to browse dates, compare cabin options, and complete bookings from mobile devices.
+
+  // ## Problem
+  // The previous site felt slow and confusing on phones. Users were abandoning the form at the pricing and availability steps.
+
+  // ## Approach
+  // - Mapped the current funnel and identified where users dropped off
+  // - Rebuilt the booking journey as a step-by-step flow with clearer progress states
+  // - Introduced server-rendered pages and lean client-side interactions to improve speed
+  // - Added lightweight analytics events to monitor conversion changes
+
+  // ## Outcome
+  // The updated booking experience became faster and easier to navigate, especially on mobile. Conversion improved and customer support tickets around bookings dropped.
+
+  // ## Lessons Learned
+  // - Simple language and clear step labels matter as much as visual polish
+  // - Performance wins are often the fastest path to better conversion`,
+  //   },
+  //   {
+  //     slug: "field-ops-dashboard",
+  //     title: "Field Ops Dashboard",
+  //     summary:
+  //       "Internal operations dashboard to plan schedules and track job completion for a service team.",
+  //     category: "Product Iteration",
+  //     role: "Part-time product engineer",
+  //     stack: ["Next.js", "React Query", "PostgreSQL", "shadcn/ui"],
+  //     outcomes: [
+  //       "Reduced weekly scheduling admin time",
+  //       "Unified reporting from multiple spreadsheets",
+  //       "Enabled safer release cycles with feature flags",
+  //     ],
+  //     images: ["/projects/field-ops-dashboard.svg"],
+  //     caseStudy: `## Overview
+  // An established business was coordinating technicians across regions using disconnected tools, which made planning and reporting painful.
+
+  // ## Problem
+  // Managers were handling planning in spreadsheets and messaging tools, causing duplicate work, stale information, and unclear ownership.
+
+  // ## Approach
+  // - Designed a compact dashboard focused on weekly planning and job state
+  // - Introduced clear status models with role-based actions
+  // - Incrementally migrated from spreadsheets to a shared source of truth
+  // - Built release checkpoints to avoid disrupting day-to-day operations
+
+  // ## Outcome
+  // The team moved from reactive updates to a predictable weekly planning rhythm, with less manual coordination and better visibility.
+
+  // ## Lessons Learned
+  // - For internal tools, reliability and clarity beat visual complexity
+  // - Iterative rollout is critical when teams already have working habits`,
+  //   },
+  //   {
+  //     slug: "studio-membership-site",
+  //     title: "Studio Membership Site",
+  //     summary:
+  //       "Conversion-focused website refresh for a local studio with class bookings and membership enquiries.",
+  //     category: "Website",
+  //     role: "Designer + developer",
+  //     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Formspree"],
+  //     outcomes: [
+  //       "Higher quality enquiries through clearer service pages",
+  //       "Simplified content management for the owner",
+  //       "Improved local SEO structure and page speed",
+  //     ],
+  //     images: ["/projects/studio-membership-site.svg"],
+  //     caseStudy: `## Overview
+  // The studio needed a calmer, clearer website that reflected their brand and turned visitors into qualified enquiries.
+
+  // ## Problem
+  // The old site mixed too many messages, had inconsistent layouts, and made it hard for visitors to understand membership options.
+
+  // ## Approach
+  // - Restructured the information architecture around user intent
+  // - Introduced consistent typography and spacing rules
+  // - Built reusable sections so new pages could be created quickly
+  // - Connected the enquiry flow directly to Formspree for low-maintenance lead capture
+
+  // ## Outcome
+  // The new site created a more trustworthy first impression and made it easier for visitors to take the next step.
+
+  // ## Lessons Learned
+  // - Small businesses benefit from simple, opinionated content structure
+  // - Design consistency reduces decision fatigue for users`,
+  //   },
   {
-    slug: "trailhead-bookings",
-    title: "Trailhead Bookings",
+    slug: "kaluna-therapies",
+    title: "Kaluna Therapies",
     summary:
-      "Booking flow redesign and performance improvements for a seasonal travel business.",
-    category: "Web App",
-    role: "Product-focused freelance developer",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-    outcomes: [
-      "Reduced booking drop-off during checkout",
-      "Cut median page load times by over 35%",
-      "Improved maintainability with shared UI patterns",
-    ],
-    images: ["/projects/trailhead-bookings.svg"],
-    caseStudy: `## Overview
-A small travel operator needed a smoother way for customers to browse dates, compare cabin options, and complete bookings from mobile devices.
-
-## Problem
-The previous site felt slow and confusing on phones. Users were abandoning the form at the pricing and availability steps.
-
-## Approach
-- Mapped the current funnel and identified where users dropped off
-- Rebuilt the booking journey as a step-by-step flow with clearer progress states
-- Introduced server-rendered pages and lean client-side interactions to improve speed
-- Added lightweight analytics events to monitor conversion changes
-
-## Outcome
-The updated booking experience became faster and easier to navigate, especially on mobile. Conversion improved and customer support tickets around bookings dropped.
-
-## Lessons Learned
-- Simple language and clear step labels matter as much as visual polish
-- Performance wins are often the fastest path to better conversion`,
-  },
-  {
-    slug: "field-ops-dashboard",
-    title: "Field Ops Dashboard",
-    summary:
-      "Internal operations dashboard to plan schedules and track job completion for a service team.",
-    category: "Product Iteration",
-    role: "Part-time product engineer",
-    stack: ["Next.js", "React Query", "PostgreSQL", "shadcn/ui"],
-    outcomes: [
-      "Reduced weekly scheduling admin time",
-      "Unified reporting from multiple spreadsheets",
-      "Enabled safer release cycles with feature flags",
-    ],
-    images: ["/projects/field-ops-dashboard.svg"],
-    caseStudy: `## Overview
-An established business was coordinating technicians across regions using disconnected tools, which made planning and reporting painful.
-
-## Problem
-Managers were handling planning in spreadsheets and messaging tools, causing duplicate work, stale information, and unclear ownership.
-
-## Approach
-- Designed a compact dashboard focused on weekly planning and job state
-- Introduced clear status models with role-based actions
-- Incrementally migrated from spreadsheets to a shared source of truth
-- Built release checkpoints to avoid disrupting day-to-day operations
-
-## Outcome
-The team moved from reactive updates to a predictable weekly planning rhythm, with less manual coordination and better visibility.
-
-## Lessons Learned
-- For internal tools, reliability and clarity beat visual complexity
-- Iterative rollout is critical when teams already have working habits`,
-  },
-  {
-    slug: "studio-membership-site",
-    title: "Studio Membership Site",
-    summary:
-      "Conversion-focused website refresh for a local studio with class bookings and membership enquiries.",
+      "Luxury spa website design and development focused on brand positioning, premium presentation, and a clear enquiry journey.",
     category: "Website",
-    role: "Designer + developer",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Formspree"],
+    role: "Frontend developer & designer",
+    stack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
     outcomes: [
-      "Higher quality enquiries through clearer service pages",
-      "Simplified content management for the owner",
-      "Improved local SEO structure and page speed",
+      "Delivered a refined digital presence aligned with a premium, personalised service brand",
+      "Improved content clarity with a cleaner information flow and stronger service storytelling",
+      "Enabled faster feedback cycles through Vercel preview deployments and iterative reviews",
     ],
-    images: ["/projects/studio-membership-site.svg"],
+    images: ["/projects/kaluna-therapies.svg"],
     caseStudy: `## Overview
-The studio needed a calmer, clearer website that reflected their brand and turned visitors into qualified enquiries.
+Kaluna Therapies needed a website that reflected the quality of Katherine's luxury spa services while presenting the business with clarity and confidence online.
 
 ## Problem
-The old site mixed too many messages, had inconsistent layouts, and made it hard for visitors to understand membership options.
+The existing digital presence did not fully communicate the bespoke, high-end experience offered to clients. The site needed a more intentional visual direction, clearer messaging, and a smoother path from browsing to enquiry.
 
 ## Approach
-- Restructured the information architecture around user intent
-- Introduced consistent typography and spacing rules
-- Built reusable sections so new pages could be created quickly
-- Connected the enquiry flow directly to Formspree for low-maintenance lead capture
+- Ran discovery sessions with Katherine to define brand tone, audience expectations, and content priorities
+- Reviewed reference experiences across premium wellness and lifestyle brands to set an appropriate visual benchmark
+- Designed a minimalist interface with high-quality imagery, calm typography, and subtle motion to support a luxury feel without visual noise
+- Worked through multiple feedback rounds with Katherine and collaborated with Page Setup Design to refine layout, spacing, and visual hierarchy
+- Built the site with Next.js, React, and Tailwind CSS, then used Vercel preview deployments to share progress quickly and support ongoing SEO and performance improvements
 
 ## Outcome
-The new site created a more trustworthy first impression and made it easier for visitors to take the next step.
+The final website now presents Kaluna Therapies as a premium, personalised service with a more polished first impression and clearer user journey. Katherine was pleased with the outcome, and the site now provides a stronger foundation for ongoing marketing and client enquiries.
 
 ## Lessons Learned
-- Small businesses benefit from simple, opinionated content structure
-- Design consistency reduces decision fatigue for users`,
+- Consistent client collaboration and rapid feedback loops are critical for translating brand nuance into a high-end digital experience
+- Partnering with specialist designers at key points in the process can significantly improve visual quality and final presentation`,
+    projectLinks: `- [Live website](https://kalunatherapies.com)`,
+    additionalResources: `- Additional design references and collaboration notes are available on request.`,
   },
   {
     slug: "cloughoge-dental-practice",
@@ -158,42 +194,6 @@ The practice launched with a cleaner digital presence and a clearer information 
     projectLinks: `- [Live website](https://cloughogedental.com)`,
     additionalResources: `- [Live website](https://cloughogedental.com)
 - Figma wireframes and logo files are available on request.`,
-  },
-  {
-    slug: "kaluna-therapies",
-    title: "Kaluna Therapies",
-    summary:
-      "Luxury spa website design and development focused on brand positioning, premium presentation, and a clear enquiry journey.",
-    category: "Website",
-    role: "Frontend developer & designer",
-    stack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-    outcomes: [
-      "Delivered a refined digital presence aligned with a premium, personalised service brand",
-      "Improved content clarity with a cleaner information flow and stronger service storytelling",
-      "Enabled faster feedback cycles through Vercel preview deployments and iterative reviews",
-    ],
-    images: ["/projects/kaluna-therapies.svg"],
-    caseStudy: `## Overview
-Kaluna Therapies needed a website that reflected the quality of Katherine's luxury spa services while presenting the business with clarity and confidence online.
-
-## Problem
-The existing digital presence did not fully communicate the bespoke, high-end experience offered to clients. The site needed a more intentional visual direction, clearer messaging, and a smoother path from browsing to enquiry.
-
-## Approach
-- Ran discovery sessions with Katherine to define brand tone, audience expectations, and content priorities
-- Reviewed reference experiences across premium wellness and lifestyle brands to set an appropriate visual benchmark
-- Designed a minimalist interface with high-quality imagery, calm typography, and subtle motion to support a luxury feel without visual noise
-- Worked through multiple feedback rounds with Katherine and collaborated with Page Setup Design to refine layout, spacing, and visual hierarchy
-- Built the site with Next.js, React, and Tailwind CSS, then used Vercel preview deployments to share progress quickly and support ongoing SEO and performance improvements
-
-## Outcome
-The final website now presents Kaluna Therapies as a premium, personalised service with a more polished first impression and clearer user journey. Katherine was pleased with the outcome, and the site now provides a stronger foundation for ongoing marketing and client enquiries.
-
-## Lessons Learned
-- Consistent client collaboration and rapid feedback loops are critical for translating brand nuance into a high-end digital experience
-- Partnering with specialist designers at key points in the process can significantly improve visual quality and final presentation`,
-    projectLinks: `- [Live website](https://kalunatherapies.com)`,
-    additionalResources: `- Additional design references and collaboration notes are available on request.`,
   },
 ];
 

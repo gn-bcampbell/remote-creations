@@ -1,0 +1,41 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="960" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EEF2ED"/>
+      <stop offset="35%" stop-color="#DCE5DE"/>
+      <stop offset="72%" stop-color="#AABAAE"/>
+      <stop offset="100%" stop-color="#6B8477"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1148 190) rotate(90) scale(228)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="0.42" stop-color="#FFF1CF" stop-opacity="0.64"/>
+      <stop offset="1" stop-color="#FFF1CF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ridgeBack" x1="800" y1="400" x2="800" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8AA08F"/>
+      <stop offset="1" stop-color="#4F6F52"/>
+    </linearGradient>
+    <linearGradient id="ridgeFront" x1="800" y1="520" x2="800" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2E5756"/>
+      <stop offset="1" stop-color="#0F3D3E"/>
+    </linearGradient>
+    <linearGradient id="trail" x1="843" y1="530" x2="789" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F7F5" stop-opacity="0.56"/>
+      <stop offset="1" stop-color="#F7F7F5" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="960" fill="url(#sky)"/>
+  <circle cx="1148" cy="190" r="228" fill="url(#sun)"/>
+
+  <path d="M0 430C196 413 346 320 551 313C734 307 848 386 1018 390C1218 394 1365 332 1600 337V960H0V430Z" fill="#D5E0D8"/>
+  <path d="M0 504C183 482 322 430 480 422C727 409 867 499 1094 498C1285 497 1429 441 1600 450V960H0V504Z" fill="#C4D1C8"/>
+
+  <path d="M0 590C203 535 346 497 514 489C746 478 941 560 1135 590C1284 613 1446 613 1600 584V960H0V590Z" fill="url(#ridgeBack)"/>
+  <path d="M0 703C186 646 341 628 509 620C707 611 873 648 1026 694C1175 738 1364 775 1600 744V960H0V703Z" fill="url(#ridgeFront)"/>
+
+  <path d="M620 960C642 885 682 823 735 777C793 727 848 691 912 650C959 620 1005 587 1056 534" stroke="url(#trail)" stroke-width="28" stroke-linecap="round"/>
+  <path d="M602 960C623 887 662 826 712 780C767 730 819 695 876 656C928 621 973 593 1018 551" stroke="#D97706" stroke-opacity="0.18" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M0 810C175 790 313 774 457 782C632 791 783 831 944 856C1141 888 1369 897 1600 846V960H0V810Z" fill="#072021" fill-opacity="0.24"/>
+</svg>

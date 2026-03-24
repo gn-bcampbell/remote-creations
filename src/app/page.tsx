@@ -1,124 +1,124 @@
 import Link from "next/link";
+import { Check } from "lucide-react";
 
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ThemedShineBorder } from "@/components/magicui/themed-shine-border";
 import { CTASection } from "@/components/shared/cta-section";
-import { HeroLargeTypography } from "@/components/shared/hero-large-typography";
 import { ProjectCard } from "@/components/shared/project-card";
 import { Section } from "@/components/shared/section";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/content/projects";
+import { HeroLargeTypography } from "@/components/shared/hero-large-typography";
 
-const servicePillars = [
+const labelClassName = "text-sm font-semibold tracking-[0.08em] text-brand-teal/70";
+
+const serviceCards = [
   {
-    title: "Design and Build",
-    copy: "Bespoke website design paired with clear UI/UX that helps visitors become enquiries.",
-    items: ["Hosting", "Bespoke website design", "UI/UX"]
+    title: "Custom websites",
+    // copy:
+    //   "Well-structured websites for businesses that need to look established online and make it easy for people to get in touch.",
+    items: ["Structure and messaging", "Design, Build, and Hosting", "Low-maintenance content setup"],
+    className: "md:translate-y-10"
   },
   {
-    title: "Visibility",
-    copy: "Improve how people find and trust your business with practical marketing and local search support.",
-    items: ["SEO", "Google Business support", "Consultation and recommendations"]
+    title: "Payment and Bookings",
+    // copy:
+    //   "Forms, bookings, payments, and follow-up journeys that are easier for customers to complete and easier for you to manage.",
+    items: ["Booking journeys", "Stripe and email integrations", "Lead capture clean-up"]
   },
   {
-    title: "Payments and User Access",
-    copy: "Handle payments, and user accounts with reliable integrations and clear user flows.",
-    items: ["Stripe Integration", "User access"]
+    title: "Internal tools",
+    // copy:
+    //   "Dashboards and workflow improvements that reduce repetitive admin without turning day-to-day work into a heavier process.",
+    items: ["Operations dashboards", "Client portals", "Targeted product iterations"],
+    className: "md:-translate-y-6"
   }
 ];
 
-const taperedDelay = (index: number, base = 0.1) => base + index * 0.14 + index * index * 0.03;
+const fitPoints = [
+  "You want one reliable person to think, design, and build.",
+  "You want guidance in plain language, not agency jargon.",
+  "You want a straightforward process with room to grow."
+];
 
-const process = [
+const workingStyle = [
   {
-    title: "1. Scope",
-    copy: "I define outcomes, constraints, and success metrics with you before writing code."
+    title: "Straight-forward communication",
+    copy: "We'll work together throughout the project, for fast iterative progress.",
+    className: "sm:col-span-2"
   },
   {
-    title: "2. Build",
-    copy: "I ship in small milestones with clear progress updates and early feedback loops."
+    title: "Measured direction",
+    copy: "I would rather recommend the right next step than oversell a bigger build."
   },
   {
-    title: "3. Support",
-    copy: "After launch, I stay available for iteration, cleanup, and handover."
+    title: "Clean handover",
+    copy: "You get something maintainable, documented where it needs to be, and easy to keep using."
   }
 ];
 
-const collaboration = [
-  {
-    title: "Small client roster",
-    copy: "I typically work with around three active freelance clients, so your project gets focused attention."
-  },
-  {
-    title: "Direct communication",
-    copy: "You work directly with me from planning through delivery, without all the red tape."
-  },
-  {
-    title: "Practical decisions",
-    copy: "I help you choose the smallest reliable path so you can launch and iterate with confidence."
-  }
-];
+const selectedProjects = projects.slice(0, 3);
 
 export default function HomePage() {
   return (
     <>
       <HeroLargeTypography />
-      <Section>
-        <div className="space-y-10">
-          <BlurFade delay={0.2} duration={0.96} viewportAmount={0.2}>
-            <div className="relative overflow-hidden rounded-[2rem] border border-brand-navy/10 bg-brand-sand/50 p-8 md:flex md:items-center md:justify-between md:gap-6">
-              <ThemedShineBorder
-                borderWidth={1.8}
-                duration={12}
-                className="opacity-85"
-                lightShineColor={["hsl(var(--brand-orange) / 0.95)", "hsl(var(--brand-teal) / 0.8)", "hsl(var(--brand-navy) / 0.75)"]}
-                darkShineColor={["white", "hsl(var(--brand-orange) / 0.95)", "hsl(var(--brand-teal) / 0.85)"]}
-              />
-              <div className="space-y-2">
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand-teal/75">Free initial consultation</p>
-                <h3 className="font-heading text-3xl text-brand-navy">Get clear direction before you spend a penny</h3>
-                <p className="max-w-2xl text-brand-teal/85">
-                  We&apos;ll get to know you and your business, then map what you actually need first. No pressure, just clear next steps.
-                </p>
-              </div>
-              <Button asChild variant="accent" size="lg" className="mt-5 md:mt-0">
-                <Link href="/contact">Book your free consultation</Link>
-              </Button>
+
+      <Section className="relative -mt-4 bg-brand-sand/72 pb-20 pt-24 md:-mt-8 md:pb-24 md:pt-28">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <BlurFade className="space-y-6 lg:sticky lg:top-32 lg:self-start" delay={0.05} duration={1.8} viewportAmount={0.2}>
+            <div className="space-y-4">
+              <p className="inline-flex rounded-full border border-brand-navy/10 bg-card px-3 py-1 text-xs uppercase tracking-[0.16em] text-brand-teal">
+                Services
+              </p>
+              <h2 className="max-w-xl font-heading text-4xl leading-[0.96] text-brand-navy md:text-5xl">
+                What&apos;s on offer?
+              </h2>
+              <p className="max-w-xl text-lg leading-8 text-brand-teal/86">
+                Some projects need a new website. Some need payment support or an internal tool to cut out the admin.
+              </p>
+              <p className="max-w-xl text-lg leading-8 text-brand-teal/86">
+                I help you understand any gaps, and together we focus on solutions that will make the biggest difference.
+              </p>
             </div>
-          </BlurFade>
-          <BlurFade delay={0.06} duration={0.9} viewportAmount={0.25}>
-            <div className="flex flex-wrap items-end justify-between gap-6 pt-5">
-              <div className="max-w-3xl space-y-4">
-                <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Services</p>
-                <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">What&apos;s on offer?</h2>
-                <p className="max-w-2xl text-lg text-brand-teal/85 md:text-xl">
-                  Practical websites to showcase your business and offer the right support where your business needs it.
-                </p>
-              </div>
-            </div>
+
+            <Card className="max-w-xl border-brand-navy/10 bg-white/76 dark:bg-card/82">
+              <CardContent className="space-y-5 p-6">
+                <p className={labelClassName}>Usually a good fit when</p>
+                <ul className="space-y-3">
+                  {fitPoints.map((item) => (
+                    <li key={item} className="flex gap-3 text-sm leading-6 text-brand-teal/84">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-brand-forest" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </BlurFade>
 
-          <div className="grid gap-6 lg:grid-cols-3">
-            {servicePillars.map((pillar, index) => (
-              <BlurFade key={pillar.title} delay={taperedDelay(index, 0.12)} duration={0.94} viewportAmount={0.2}>
-                <Card className="relative h-full overflow-hidden">
-                  {index === 1 ? (
-                    <ThemedShineBorder
-                      borderWidth={1.4}
-                      duration={16}
-                      className="opacity-55"
-                      lightShineColor={["hsl(var(--brand-teal) / 0.7)", "hsl(var(--brand-orange) / 0.8)"]}
-                      darkShineColor={["white", "hsl(var(--brand-orange) / 0.9)"]}
-                    />
-                  ) : null}
-                  <CardContent className="space-y-4 p-7">
-                    <h3 className="font-heading text-3xl text-brand-navy">{pillar.title}</h3>
-                    <p className="text-brand-teal/85">{pillar.copy}</p>
-                    <ul className="space-y-2">
-                      {pillar.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-brand-teal/80 pl-4">
-                          <span aria-hidden className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-orange/80" />
+          <div className="grid gap-5 md:grid-cols-[1.02fr_0.98fr]">
+            {serviceCards.map((service, index) => (
+              <BlurFade
+                key={service.title}
+                className={service.className}
+                delay={0.12 + index * 0.12}
+                duration={0.96}
+                viewportAmount={0.18}
+              >
+                <Card className="relative h-full overflow-hidden border-brand-navy/10 bg-white/78 dark:bg-card/82">
+                  <CardContent className="space-y-5 p-7">
+                    <div className="space-y-3">
+                      {/* <p className={labelClassName}>Service</p> */}
+                      <h3 className="font-heading text-[2rem] leading-[1.02] text-brand-navy">{service.title}</h3>
+                      {/* <p className="text-sm leading-7 text-brand-teal/84">{service.copy}</p> */}
+                    </div>
+
+                    <ul className="space-y-3">
+                      {service.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-sm leading-6 text-brand-navy/86">
+                          <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-orange/85" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -131,60 +131,71 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section className="bg-brand-sand/40">
-        <BlurFade delay={0.08} duration={0.9} viewportAmount={0.25}>
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-2xl space-y-4">
-              <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Featured Work</p>
-              <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">Selected projects with practical outcomes.</h2>
-            </div>
-            <Button asChild variant="outline">
-              <Link href="/work">View all work</Link>
-            </Button>
+      <Section className="pb-20 pt-20 md:pb-24 md:pt-24">
+        <BlurFade className="mb-10 flex flex-wrap items-end justify-between gap-6" delay={0.06} duration={0.9} viewportAmount={0.2}>
+          <div className="max-w-2xl space-y-4">
+            <p className="inline-flex rounded-full border border-brand-navy/10 bg-card px-3 py-1 text-xs uppercase tracking-[0.16em] text-brand-teal">
+              Selected work
+            </p>
+            <h2 className="font-heading text-4xl leading-[0.96] text-brand-navy md:text-5xl">
+              Portfolio of work
+            </h2>
           </div>
+          <Button asChild variant="outline">
+            <Link href="/work">See all case studies</Link>
+          </Button>
         </BlurFade>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {projects.slice(0, 2).map((project, index) => (
-            <BlurFade key={project.slug} delay={taperedDelay(index, 0.16)} duration={0.94} viewportAmount={0.2}>
+        <div className="mx-auto flex max-w-[74rem] flex-wrap justify-center gap-6 lg:gap-8">
+          {selectedProjects.map((project, index) => (
+            <BlurFade
+              key={project.slug}
+              className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(50%-1rem)]"
+              delay={0.12 + index * 0.1}
+              duration={0.96}
+              viewportAmount={0.16}
+            >
               <ProjectCard project={project} />
             </BlurFade>
           ))}
         </div>
       </Section>
 
-      <Section>
-        <BlurFade className="mb-10 max-w-3xl space-y-4" delay={0.08} duration={0.9} viewportAmount={0.25}>
-          <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Process</p>
-          <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">Simple project flow with clear checkpoints.</h2>
-        </BlurFade>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {process.map((step, index) => (
-            <BlurFade key={step.title} delay={taperedDelay(index, 0.14)} duration={0.94} viewportAmount={0.2}>
-              <Card className="h-full">
-                <CardContent className="space-y-3 p-7">
-                  <h3 className="font-heading text-3xl text-brand-navy">{step.title}</h3>
-                  <p className="text-brand-teal/85">{step.copy}</p>
-                </CardContent>
-              </Card>
-            </BlurFade>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <div className="space-y-10">
-          <BlurFade className="max-w-3xl space-y-4" delay={0.08} duration={0.9} viewportAmount={0.25}>
-            <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Working Style</p>
-            <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">Calm delivery, clear communication, no bloat</h2>
+      <Section className="pb-10 pt-20 md:pb-16 md:pt-24">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <BlurFade className="space-y-5" delay={0.06} duration={0.9} viewportAmount={0.2}>
+            <p className="inline-flex rounded-full border border-brand-navy/10 bg-card px-3 py-1 text-xs uppercase tracking-[0.16em] text-brand-teal">
+              Working style
+            </p>
+            <h2 className="max-w-xl font-heading text-4xl leading-[0.96] text-brand-navy md:text-5xl">
+              Clear communication & steady delivery
+            </h2>
+            <p className="max-w-xl text-lg leading-8 text-brand-teal/86">
+              I keep a small client roster so projects get proper attention. That means fewer competing priorities,
+              simpler conversations, and more time spent making the work better.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {["Small client roster", "Remote-first workflow", "Focused handover support"].map((item) => (
+                <Badge key={item} variant="secondary" className="bg-brand-forest/8 tracking-[0.05em]">
+                  {item}
+                </Badge>
+              ))}
+            </div>
           </BlurFade>
-          <div className="grid gap-6 md:grid-cols-3">
-            {collaboration.map((item, index) => (
-              <BlurFade key={item.title} delay={taperedDelay(index, 0.14)} duration={0.94} viewportAmount={0.2}>
-                <Card className="h-full">
-                  <CardContent className="space-y-3 p-7">
-                    <h3 className="font-heading text-3xl text-brand-navy">{item.title}</h3>
-                    <p className="text-brand-teal/85">{item.copy}</p>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {workingStyle.map((item, index) => (
+              <BlurFade
+                key={item.title}
+                className={item.className}
+                delay={0.14 + index * 0.12}
+                duration={0.92}
+                viewportAmount={0.18}
+              >
+                <Card className="h-full border-brand-navy/10">
+                  <CardContent className="space-y-4 p-7">
+                    <h3 className="font-heading text-[1.9rem] leading-[1.02] text-brand-navy">{item.title}</h3>
+                    <p className="text-sm leading-7 text-brand-teal/84">{item.copy}</p>
                   </CardContent>
                 </Card>
               </BlurFade>
@@ -194,8 +205,8 @@ export default function HomePage() {
       </Section>
 
       <CTASection
-        title="Need a dependable developer?"
-        description="I work with a small number of clients at a time, so each project gets focused attention and steady delivery."
+        title="Need a reliable developer without agency overhead?"
+        description="If you need a new site, a product improvement, or a cleaner customer journey, send me a note."
       />
     </>
   );

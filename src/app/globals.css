@@ -3,36 +3,37 @@
 @tailwind utilities;
 
 :root {
-  /* Default font pair */
-  --font-heading: "Book Antiqua", "Palatino Linotype", "Times New Roman", serif;
-  --font-body: "Helvetica Neue", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --font-heading: "Inter", "Avenir Next", "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  --font-body: "Inter", "Avenir Next", "Segoe UI", Helvetica, Arial,
+    sans-serif;
 
-  --brand-navy: 204 59% 15%;
-  --brand-teal: 191 59% 22%;
-  --brand-orange: 27 65% 47%;
-  --brand-forest: 139 32% 27%;
-  --brand-sand: 33 27% 96%;
+  --brand-navy: 181 61% 15%;
+  --brand-teal: 215 28% 17%;
+  --brand-orange: 32 95% 44%;
+  --brand-forest: 126 17% 37%;
+  --brand-sand: 60 8% 97%;
 
   --background: 0 0% 100%;
-  --foreground: 204 50% 15%;
+  --foreground: 215 28% 17%;
   --card: 0 0% 100%;
-  --card-foreground: 204 50% 15%;
+  --card-foreground: 181 61% 15%;
   --popover: 0 0% 100%;
-  --popover-foreground: 204 50% 15%;
-  --primary: 204 50% 15%;
+  --popover-foreground: 181 61% 15%;
+  --primary: 181 61% 15%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 30 33% 97%;
-  --secondary-foreground: 204 50% 15%;
-  --muted: 30 33% 97%;
-  --muted-foreground: 194 38% 32%;
-  --accent: 27 65% 47%;
+  --secondary: 60 8% 97%;
+  --secondary-foreground: 181 61% 15%;
+  --muted: 60 8% 97%;
+  --muted-foreground: 215 18% 34%;
+  --accent: 32 95% 44%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --border: 204 30% 89%;
-  --input: 204 30% 89%;
-  --ring: 204 50% 15%;
-  --radius: 1rem;
+  --border: 180 16% 88%;
+  --input: 180 16% 88%;
+  --ring: 181 61% 15%;
+  --radius: 1.5rem;
 }
 /* ========================================
    FONT STYLE PRESETS
@@ -113,31 +114,35 @@ html[data-font-style="reading"] {
 }
 
 .dark {
-  --brand-navy: 210 45% 94%;
-  --brand-teal: 190 26% 75%;
-  --brand-orange: 27 73% 60%;
-  --brand-forest: 140 18% 67%;
-  --brand-sand: 204 24% 16%;
+  --brand-navy: 182 30% 90%;
+  --brand-teal: 197 22% 80%;
+  --brand-orange: 32 85% 58%;
+  --brand-forest: 126 18% 68%;
+  --brand-sand: 182 17% 12%;
 
-  --background: 204 44% 10%;
+  --background: 182 31% 9%;
   --foreground: 0 0% 98%;
-  --card: 204 44% 12%;
+  --card: 182 26% 11%;
   --card-foreground: 0 0% 98%;
-  --popover: 204 44% 12%;
+  --popover: 182 26% 11%;
   --popover-foreground: 0 0% 98%;
   --primary: 0 0% 98%;
-  --primary-foreground: 204 50% 15%;
-  --secondary: 204 24% 18%;
+  --primary-foreground: 181 61% 15%;
+  --secondary: 182 17% 14%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 204 24% 18%;
-  --muted-foreground: 201 22% 80%;
-  --accent: 27 65% 47%;
+  --muted: 182 17% 14%;
+  --muted-foreground: 202 18% 80%;
+  --accent: 32 85% 58%;
   --accent-foreground: 0 0% 98%;
   --destructive: 0 70% 44%;
   --destructive-foreground: 0 0% 98%;
-  --border: 205 25% 24%;
-  --input: 205 25% 24%;
+  --border: 182 15% 22%;
+  --input: 182 15% 22%;
   --ring: 0 0% 98%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -147,17 +152,30 @@ html[data-font-style="reading"] {
 body {
   @apply bg-background font-body text-foreground antialiased;
   background-image: linear-gradient(
-    to bottom,
-    rgba(247, 245, 242, 0.35),
-    transparent 40%
-  );
+      180deg,
+      rgba(247, 247, 245, 0.55) 0%,
+      rgba(255, 255, 255, 0.98) 18%,
+      rgba(247, 247, 245, 0.28) 62%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(79, 111, 82, 0.07),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(15, 61, 62, 0.05),
+      transparent 20%
+    );
+  line-height: 1.55;
 }
 
 .dark body {
   background-image: linear-gradient(
     to bottom,
-    rgba(22, 39, 54, 0.55),
-    rgba(8, 16, 24, 0.25) 45%,
+    rgba(10, 26, 26, 0.92),
+    rgba(8, 18, 18, 0.78) 45%,
     transparent 70%
   );
 }
@@ -167,11 +185,20 @@ a {
 }
 
 ::selection {
-  background: hsl(var(--brand-orange) / 0.3);
+  background: hsl(var(--brand-orange) / 0.24);
   color: hsl(var(--foreground));
 }
 
 .dark ::selection {
   background: hsl(var(--brand-orange) / 0.5);
   color: hsl(var(--foreground));
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.04em;
+  }
 }

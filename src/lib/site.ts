@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Remote Creations",
   description:
-    "Independent freelance developer helping small and medium businesses ship reliable websites and apps.",
+    "Independent freelance developer building clear, reliable websites and software for small businesses.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://remote-creations.vercel.app",
-  email: "hello@remotecreations.dev",
+  email: "info@remotecreations.com",
   social: {
     github: "https://github.com/gn-bcampbell",
     linkedin: "https://www.linkedin.com/in/bcampbell21",

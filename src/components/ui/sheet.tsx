@@ -16,7 +16,7 @@ const SheetOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
-    className={cn("fixed inset-0 z-50 bg-brand-navy/25 backdrop-blur-sm", className)}
+    className={cn("fixed inset-0 z-50 bg-brand-navy/25 backdrop-blur-sm dark:bg-black/60", className)}
     {...props}
     ref={ref}
   />
@@ -32,7 +32,7 @@ const SheetContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed inset-y-0 right-0 z-50 h-full w-full max-w-xs border-l border-brand-navy/15 bg-card p-6 shadow-xl",
+        "fixed inset-y-0 right-0 z-50 h-full w-full max-w-xs border-l border-brand-navy/15 bg-card p-6 shadow-xl dark:border-l-white/10",
         className
       )}
       {...props}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ContactForm } from "@/components/shared/contact-form";
@@ -13,6 +14,27 @@ export const metadata: Metadata = buildMetadata({
   description: "Start a project conversation with Remote Creations.",
   path: "/contact"
 });
+
+const contactMethods = [
+  {
+    label: "Email",
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
+    icon: Mail
+  },
+  {
+    label: "LinkedIn",
+    value: "Connect on LinkedIn",
+    href: siteConfig.social.linkedin,
+    icon: Linkedin
+  },
+  {
+    label: "GitHub",
+    value: "View GitHub profile",
+    href: siteConfig.social.github,
+    icon: Github
+  }
+];
 
 export default function ContactPage() {
   return (
@@ -36,21 +58,29 @@ export default function ContactPage() {
           <Card>
             <CardContent className="space-y-3 p-7">
               <h2 className="font-heading text-3xl text-brand-navy">Other ways to reach me</h2>
-              <p className="text-brand-teal/85">
-                Prefer email? Use <Link href={`mailto:${siteConfig.email}`} className="text-brand-orange">{siteConfig.email}</Link>
-              </p>
-              <p className="text-brand-teal/85">
-                Or connect on{" "}
-                <Link href={siteConfig.social.linkedin} className="text-brand-orange" target="_blank" rel="noreferrer">
-                  LinkedIn
-                </Link>
-              </p>
-              <p className="text-brand-teal/85">
-                Checkout my {" "}
-                <Link href={siteConfig.social.github} className="text-brand-orange" target="_blank" rel="noreferrer">
-                  GitHub
-                </Link>
-              </p>
+              <div className="space-y-3 pt-1">
+                {contactMethods.map((method) => {
+                  const Icon = method.icon;
+
+                  return (
+                    <Link
+                      key={method.label}
+                      href={method.href}
+                      className="flex items-center gap-4 rounded-[1.35rem] border border-brand-navy/10 bg-white/60 px-4 py-3 text-brand-teal/85 transition hover:-translate-y-0.5 hover:border-brand-navy/16 hover:bg-white dark:bg-white/6 dark:hover:bg-white/10"
+                      target={method.href.startsWith("http") ? "_blank" : undefined}
+                      rel={method.href.startsWith("http") ? "noreferrer" : undefined}
+                    >
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-sand text-brand-navy dark:bg-white/10">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className="space-y-0.5">
+                        <span className="block text-sm font-medium text-brand-navy">{method.label}</span>
+                        <span className="block text-sm text-brand-teal/75">{method.value}</span>
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
             </CardContent>
           </Card>
 

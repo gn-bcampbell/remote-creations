@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: "Remote Creations | Freelance Web Developer",
     description:
-      "Remote Creations is a solo freelance development studio building reliable websites and apps for small and medium businesses.",
+      "Remote Creations is a freelance development practice designing and building clear, reliable websites and software for small businesses.",
     path: "/"
   })
 };

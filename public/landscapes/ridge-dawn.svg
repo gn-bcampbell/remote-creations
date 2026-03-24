@@ -1,0 +1,58 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="600" y1="0" x2="600" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7F7F5"/>
+      <stop offset="38%" stop-color="#E6ECE7"/>
+      <stop offset="72%" stop-color="#D0DBD2"/>
+      <stop offset="100%" stop-color="#B9C7BE"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(878 238) rotate(90) scale(285)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="0.38" stop-color="#FFF3D9" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#FFF3D9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ridgeA" x1="600" y1="650" x2="600" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8B9AF"/>
+      <stop offset="1" stop-color="#6A8073"/>
+    </linearGradient>
+    <linearGradient id="ridgeB" x1="600" y1="735" x2="600" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8CA191"/>
+      <stop offset="1" stop-color="#4F6F52"/>
+    </linearGradient>
+    <linearGradient id="ridgeC" x1="600" y1="870" x2="600" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#395D59"/>
+      <stop offset="1" stop-color="#0F3D3E"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="600" y1="720" x2="600" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softBlur" x="-120" y="-120" width="1440" height="1740" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1500" fill="url(#sky)"/>
+  <circle cx="878" cy="238" r="285" fill="url(#glow)"/>
+
+  <g opacity="0.7">
+    <path d="M0 500C205 460 370 402 566 398C758 394 971 444 1200 414V1500H0V500Z" fill="#E2E8E2"/>
+    <path d="M0 610C166 566 319 530 478 523C676 515 905 580 1200 548V1500H0V610Z" fill="#D7E0D9"/>
+  </g>
+
+  <g filter="url(#softBlur)" opacity="0.36">
+    <path d="M98 972C271 849 420 779 595 763C806 742 980 823 1124 918L1200 1042V1500H0V1128L98 972Z" fill="#FFFFFF"/>
+  </g>
+
+  <path d="M0 848C156 766 287 711 435 690C618 665 793 720 948 781C1046 819 1139 867 1200 852V1500H0V848Z" fill="url(#ridgeA)"/>
+  <path d="M0 948C174 862 326 810 484 792C676 770 855 828 1008 892C1088 926 1152 965 1200 954V1500H0V948Z" fill="url(#ridgeB)"/>
+  <path d="M0 1064C117 985 224 940 355 910C532 869 698 896 839 954C932 992 1034 1054 1200 1054V1500H0V1064Z" fill="url(#ridgeC)"/>
+
+  <ellipse cx="604" cy="824" rx="520" ry="118" fill="url(#mist)"/>
+  <ellipse cx="731" cy="932" rx="382" ry="96" fill="url(#mist)" opacity="0.52"/>
+
+  <path d="M487 1000C602 1008 712 1052 787 1138C831 1188 873 1253 932 1320" stroke="#F7F7F5" stroke-opacity="0.42" stroke-width="4" stroke-linecap="round"/>
+  <path d="M446 1038C564 1060 645 1105 707 1178" stroke="#D97706" stroke-opacity="0.42" stroke-width="3" stroke-linecap="round"/>
+
+  <path d="M0 1318C181 1284 320 1264 488 1269C650 1274 803 1312 960 1333C1048 1345 1128 1341 1200 1322V1500H0V1318Z" fill="#072021" fill-opacity="0.34"/>
+</svg>
