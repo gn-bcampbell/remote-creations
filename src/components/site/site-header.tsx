@@ -4,9 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
-// import { FontStyleToggle } from "@/components/site/font-style-toggle";
 import { LogoMark } from "@/components/site/logo-mark";
-import { ModeToggle } from "@/components/site/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { siteConfig } from "@/lib/site";
@@ -16,8 +14,8 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md">
-      <div className="container flex h-20 items-center justify-between">
+    <header className="sticky top-0 z-40 border-b border-brand-navy/10 glass-nav">
+      <div className="container flex h-20 items-center justify-between gap-6">
         <LogoMark />
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
@@ -28,23 +26,20 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm text-brand-teal/85 transition hover:text-brand-navy",
-                  isActive && "font-medium text-brand-navy"
+                  "border-b-2 border-transparent pb-1 text-sm font-semibold tracking-[0.08em] text-brand-teal/82 transition hover:text-brand-navy",
+                  isActive && "border-brand-navy text-brand-navy"
                 )}
               >
                 {item.label}
               </Link>
             );
           })}
-          {/* <FontStyleToggle /> */}
-          <ModeToggle />
-          <Button asChild variant="accent" size="sm">
-            <Link href="/contact">Start a Project</Link>
+          <Button asChild variant="accent" size="sm" className="px-5">
+            <Link href="/contact">Start Ascent</Link>
           </Button>
         </nav>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ModeToggle />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Open menu">
@@ -56,7 +51,6 @@ export function SiteHeader() {
                 <SheetTitle>Navigation</SheetTitle>
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-4" aria-label="Mobile">
-                {/* <FontStyleToggle className="flex md:hidden" /> */}
                 {siteConfig.navItems.map((item) => {
                   const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
                   return (
@@ -64,7 +58,7 @@ export function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       className={cn(
-                        "rounded-xl px-3 py-2 text-brand-teal transition hover:bg-brand-navy/5 hover:text-brand-navy",
+                        "rounded-2xl px-4 py-3 text-brand-teal transition hover:bg-brand-navy/5 hover:text-brand-navy",
                         isActive && "bg-brand-navy/10 text-brand-navy"
                       )}
                     >
@@ -73,7 +67,7 @@ export function SiteHeader() {
                   );
                 })}
                 <Button asChild variant="accent" className="mt-3 w-full">
-                  <Link href="/contact">Start a Project</Link>
+                  <Link href="/contact">Start Ascent</Link>
                 </Button>
               </nav>
             </SheetContent>

@@ -1,20 +1,34 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { LoaderCircle } from "lucide-react";
+import { ArrowUpRight, LoaderCircle } from "lucide-react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { peakPage } from "@/content/site-content";
+import { cn } from "@/lib/utils";
 
 const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
 
-const initialState = {
+type BudgetOption = (typeof peakPage.budgetOptions)[number];
+
+type ContactFormState = {
+  name: string;
+  company: string;
+  email: string;
+  message: string;
+  budget: BudgetOption;
+};
+
+const initialState: ContactFormState = {
   name: "",
+  company: "",
   email: "",
-  message: ""
+  message: "",
+  budget: peakPage.budgetOptions[1]
 };
 
 function isValidEmail(email: string) {
@@ -74,21 +88,42 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-      <div className="space-y-2">
-        <Label htmlFor="name">Name</Label>
-        <Input
-          id="name"
-          name="name"
-          required
-          value={form.name}
-          onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
-          placeholder="Your name"
-        />
+    <form onSubmit={handleSubmit} className="space-y-8" noValidate>
+      <div className="grid gap-6 md:grid-cols-2">
+        <div className="space-y-2">
+          <Label htmlFor="name" className="text-xs uppercase tracking-[0.22em] text-brand-teal/70">
+            Name
+          </Label>
+          <Input
+            id="name"
+            name="name"
+            required
+            value={form.name}
+            onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
+            placeholder="Alex Sterling"
+            className="h-12 border-brand-navy/10 bg-brand-sand/55"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="company" className="text-xs uppercase tracking-[0.22em] text-brand-teal/70">
+            Company
+          </Label>
+          <Input
+            id="company"
+            name="company"
+            value={form.company}
+            onChange={(event) => setForm((prev) => ({ ...prev, company: event.target.value }))}
+            placeholder="Summit Systems"
+            className="h-12 border-brand-navy/10 bg-brand-sand/55"
+          />
+        </div>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email" className="text-xs uppercase tracking-[0.22em] text-brand-teal/70">
+          Email
+        </Label>
         <Input
           id="email"
           name="email"
@@ -97,11 +132,14 @@ export function ContactForm() {
           value={form.email}
           onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
           placeholder="you@company.com"
+          className="h-12 border-brand-navy/10 bg-brand-sand/55"
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message">Project message</Label>
+        <Label htmlFor="message" className="text-xs uppercase tracking-[0.22em] text-brand-teal/70">
+          Project Details
+        </Label>
         <Textarea
           id="message"
           name="message"
@@ -109,18 +147,43 @@ export function ContactForm() {
           minLength={20}
           value={form.message}
           onChange={(event) => setForm((prev) => ({ ...prev, message: event.target.value }))}
-          placeholder="Share the goals, timeline, and what you need help with."
+          placeholder="Tell me about your trail. What are we building, what stage are you in, and what needs to work?"
+          className="min-h-[180px] border-brand-navy/10 bg-brand-sand/55"
         />
       </div>
 
-      <Button type="submit" variant="accent" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
+      <div className="space-y-4">
+        <Label className="text-xs uppercase tracking-[0.22em] text-brand-teal/70">Budget Range</Label>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {peakPage.budgetOptions.map((option) => (
+            <button
+              key={option}
+              type="button"
+              onClick={() => setForm((prev) => ({ ...prev, budget: option }))}
+              className={cn(
+                "rounded-2xl border px-4 py-3 text-xs font-semibold uppercase tracking-[0.16em] transition-colors",
+                form.budget === option
+                  ? "border-brand-navy bg-brand-navy text-white"
+                  : "border-brand-navy/10 bg-brand-sand/45 text-brand-teal/78 hover:border-brand-navy/30 hover:text-brand-navy"
+              )}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <Button type="submit" variant="accent" size="lg" disabled={isSubmitting} className="w-full justify-center">
         {isSubmitting ? (
           <>
             <LoaderCircle className="h-4 w-4 animate-spin" />
             Sending...
           </>
         ) : (
-          "Send Message"
+          <>
+            Send Message
+            <ArrowUpRight className="h-4 w-4" />
+          </>
         )}
       </Button>
     </form>

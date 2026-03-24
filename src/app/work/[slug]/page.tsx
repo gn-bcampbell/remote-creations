@@ -56,7 +56,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         <div className="container space-y-10">
           <BlurFade className="space-y-4">
             <Link href="/work" className="text-sm text-brand-orange transition hover:text-brand-navy">
-              {"<-"} Back to work
+              {"<-"} Back to the portfolio
             </Link>
             <Badge variant="secondary" className="w-fit">
               {project.category}
@@ -147,7 +147,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       <CTASection
         title="Have a similar project in mind?"
-        description="Share what you're building and I'll let you know if I'm a good fit."
+        description="Share what you're building and I’ll let you know where the simplest dependable path starts."
       />
     </>
   );

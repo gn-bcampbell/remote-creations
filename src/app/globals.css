@@ -3,140 +3,62 @@
 @tailwind utilities;
 
 :root {
-  /* Default font pair */
-  --font-heading: "Book Antiqua", "Palatino Linotype", "Times New Roman", serif;
-  --font-body: "Helvetica Neue", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --font-heading: "Avenir Next", "Manrope", "Trebuchet MS", sans-serif;
+  --font-body: "Inter", "Avenir Next", "Segoe UI", sans-serif;
 
-  --brand-navy: 204 59% 15%;
-  --brand-teal: 191 59% 22%;
-  --brand-orange: 27 65% 47%;
-  --brand-forest: 139 32% 27%;
-  --brand-sand: 33 27% 96%;
+  --brand-navy: 173 58% 11%;
+  --brand-teal: 170 31% 21%;
+  --brand-orange: 34 59% 46%;
+  --brand-forest: 86 18% 27%;
+  --brand-sand: 150 24% 94%;
 
-  --background: 0 0% 100%;
-  --foreground: 204 50% 15%;
+  --background: 156 23% 97%;
+  --foreground: 173 42% 12%;
   --card: 0 0% 100%;
-  --card-foreground: 204 50% 15%;
+  --card-foreground: 173 42% 12%;
   --popover: 0 0% 100%;
-  --popover-foreground: 204 50% 15%;
-  --primary: 204 50% 15%;
+  --popover-foreground: 173 42% 12%;
+  --primary: 173 58% 11%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 30 33% 97%;
-  --secondary-foreground: 204 50% 15%;
-  --muted: 30 33% 97%;
-  --muted-foreground: 194 38% 32%;
-  --accent: 27 65% 47%;
+  --secondary: 150 20% 92%;
+  --secondary-foreground: 173 42% 12%;
+  --muted: 150 20% 92%;
+  --muted-foreground: 194 15% 33%;
+  --accent: 34 59% 46%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --border: 204 30% 89%;
-  --input: 204 30% 89%;
-  --ring: 204 50% 15%;
-  --radius: 1rem;
-}
-/* ========================================
-   FONT STYLE PRESETS
-   Controlled via: <html data-font-style="">
-======================================== */
-
-/* Default System */
-html[data-font-style="default"] {
-  --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, Arial,
-    sans-serif;
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-}
-
-/* Gallery Modern (art gallery feel) */
-html[data-font-style="gallery"] {
-  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-
-/* Friendly Studio (solo dev vibe) */
-html[data-font-style="friendly"] {
-  --font-heading: "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
-}
-
-/* Modern Tech */
-html[data-font-style="tech"] {
-  --font-heading: "Inter", "Segoe UI", system-ui, sans-serif;
-  --font-body: "IBM Plex Sans", system-ui, sans-serif;
-}
-
-/* Editorial Serif */
-html[data-font-style="editorial"] {
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
-}
-
-/* Dev Mono */
-html[data-font-style="mono"] {
-  --font-heading: "JetBrains Mono", Menlo, monospace;
-  --font-body: system-ui, "Segoe UI", sans-serif;
-}
-
-/* Outdoor / Human (matches hiking brand tone) */
-html[data-font-style="outdoor"] {
-  --font-heading: "Gill Sans", "Trebuchet MS", "Segoe UI", sans-serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
-}
-
-/* Bold Display */
-html[data-font-style="bold"] {
-  --font-heading: Impact, "Arial Black", "Helvetica Neue", sans-serif;
-  --font-body: "Segoe UI", system-ui, sans-serif;
-}
-
-/* Minimal Clean */
-html[data-font-style="minimal"] {
-  --font-heading: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-
-/* Retro Modern */
-html[data-font-style="retro-modern"] {
-  --font-heading: "Futura", "Trebuchet MS", "Segoe UI", sans-serif;
-  --font-body: "Helvetica Neue", Arial, sans-serif;
-}
-
-/* Playful Clean */
-html[data-font-style="playful-clean"] {
-  --font-heading: "Nunito", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Quicksand", "Segoe UI", sans-serif;
-}
-
-/* Reading Focus */
-html[data-font-style="reading"] {
-  --font-heading: Georgia, "Times New Roman", serif;
-  --font-body: "Source Serif 4", Georgia, serif;
+  --border: 173 18% 86%;
+  --input: 173 18% 86%;
+  --ring: 173 42% 12%;
+  --radius: 1.25rem;
 }
 
 .dark {
-  --brand-navy: 210 45% 94%;
-  --brand-teal: 190 26% 75%;
-  --brand-orange: 27 73% 60%;
-  --brand-forest: 140 18% 67%;
-  --brand-sand: 204 24% 16%;
+  --brand-navy: 156 22% 96%;
+  --brand-teal: 171 18% 78%;
+  --brand-orange: 34 63% 61%;
+  --brand-forest: 86 18% 71%;
+  --brand-sand: 173 25% 15%;
 
-  --background: 204 44% 10%;
+  --background: 173 45% 8%;
   --foreground: 0 0% 98%;
-  --card: 204 44% 12%;
+  --card: 173 36% 11%;
   --card-foreground: 0 0% 98%;
-  --popover: 204 44% 12%;
+  --popover: 173 36% 11%;
   --popover-foreground: 0 0% 98%;
   --primary: 0 0% 98%;
-  --primary-foreground: 204 50% 15%;
-  --secondary: 204 24% 18%;
+  --primary-foreground: 173 45% 8%;
+  --secondary: 173 24% 16%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 204 24% 18%;
-  --muted-foreground: 201 22% 80%;
-  --accent: 27 65% 47%;
+  --muted: 173 24% 16%;
+  --muted-foreground: 156 16% 82%;
+  --accent: 34 63% 61%;
   --accent-foreground: 0 0% 98%;
   --destructive: 0 70% 44%;
   --destructive-foreground: 0 0% 98%;
-  --border: 205 25% 24%;
-  --input: 205 25% 24%;
+  --border: 173 18% 22%;
+  --input: 173 18% 22%;
   --ring: 0 0% 98%;
 }
 
@@ -144,22 +66,21 @@ html[data-font-style="reading"] {
   @apply border-border;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   @apply bg-background font-body text-foreground antialiased;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(247, 245, 242, 0.35),
-    transparent 40%
-  );
+  background-image:
+    radial-gradient(circle at top, rgba(171, 206, 198, 0.24), transparent 34%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.42), transparent 28%);
 }
 
 .dark body {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(22, 39, 54, 0.55),
-    rgba(8, 16, 24, 0.25) 45%,
-    transparent 70%
-  );
+  background-image:
+    radial-gradient(circle at top, rgba(116, 156, 149, 0.2), transparent 32%),
+    linear-gradient(to bottom, rgba(8, 24, 22, 0.65), transparent 38%);
 }
 
 a {
@@ -167,11 +88,24 @@ a {
 }
 
 ::selection {
-  background: hsl(var(--brand-orange) / 0.3);
+  background: hsl(var(--brand-orange) / 0.26);
   color: hsl(var(--foreground));
 }
 
 .dark ::selection {
-  background: hsl(var(--brand-orange) / 0.5);
+  background: hsl(var(--brand-orange) / 0.45);
   color: hsl(var(--foreground));
+}
+
+.glass-nav {
+  background: hsl(var(--background) / 0.82);
+  backdrop-filter: blur(18px);
+}
+
+.alpine-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--brand-teal)) 100%);
+}
+
+.topo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 18C24 8 42 9 58 24C74 39 91 40 112 28' stroke='%230c2d29' stroke-opacity='0.09' stroke-width='1.1'/%3E%3Cpath d='M-8 46C12 30 36 30 58 46C80 62 98 62 128 40' stroke='%230c2d29' stroke-opacity='0.06' stroke-width='1.1'/%3E%3Cpath d='M10 82C27 72 42 72 58 86C74 100 92 102 110 94' stroke='%230c2d29' stroke-opacity='0.07' stroke-width='1.1'/%3E%3C/svg%3E");
 }

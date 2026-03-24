@@ -1,202 +1,136 @@
 import Link from "next/link";
 
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ThemedShineBorder } from "@/components/magicui/themed-shine-border";
+import { FeatureCard } from "@/components/marketing/feature-card";
+import { IllustrationPanel } from "@/components/marketing/illustration-panel";
+import { SectionHeading } from "@/components/marketing/section-heading";
 import { CTASection } from "@/components/shared/cta-section";
-import { HeroLargeTypography } from "@/components/shared/hero-large-typography";
 import { ProjectCard } from "@/components/shared/project-card";
 import { Section } from "@/components/shared/section";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/content/projects";
-
-const servicePillars = [
-  {
-    title: "Design and Build",
-    copy: "Bespoke website design paired with clear UI/UX that helps visitors become enquiries.",
-    items: ["Hosting", "Bespoke website design", "UI/UX"]
-  },
-  {
-    title: "Visibility",
-    copy: "Improve how people find and trust your business with practical marketing and local search support.",
-    items: ["SEO", "Google Business support", "Consultation and recommendations"]
-  },
-  {
-    title: "Payments and User Access",
-    copy: "Handle payments, and user accounts with reliable integrations and clear user flows.",
-    items: ["Stripe Integration", "User access"]
-  }
-];
+import { basecampPage } from "@/content/site-content";
 
 const taperedDelay = (index: number, base = 0.1) => base + index * 0.14 + index * index * 0.03;
-
-const process = [
-  {
-    title: "1. Scope",
-    copy: "I define outcomes, constraints, and success metrics with you before writing code."
-  },
-  {
-    title: "2. Build",
-    copy: "I ship in small milestones with clear progress updates and early feedback loops."
-  },
-  {
-    title: "3. Support",
-    copy: "After launch, I stay available for iteration, cleanup, and handover."
-  }
-];
-
-const collaboration = [
-  {
-    title: "Small client roster",
-    copy: "I typically work with around three active freelance clients, so your project gets focused attention."
-  },
-  {
-    title: "Direct communication",
-    copy: "You work directly with me from planning through delivery, without all the red tape."
-  },
-  {
-    title: "Practical decisions",
-    copy: "I help you choose the smallest reliable path so you can launch and iterate with confidence."
-  }
-];
 
 export default function HomePage() {
   return (
     <>
-      <HeroLargeTypography />
-      <Section>
-        <div className="space-y-10">
-          <BlurFade delay={0.2} duration={0.96} viewportAmount={0.2}>
-            <div className="relative overflow-hidden rounded-[2rem] border border-brand-navy/10 bg-brand-sand/50 p-8 md:flex md:items-center md:justify-between md:gap-6">
-              <ThemedShineBorder
-                borderWidth={1.8}
-                duration={12}
-                className="opacity-85"
-                lightShineColor={["hsl(var(--brand-orange) / 0.95)", "hsl(var(--brand-teal) / 0.8)", "hsl(var(--brand-navy) / 0.75)"]}
-                darkShineColor={["white", "hsl(var(--brand-orange) / 0.95)", "hsl(var(--brand-teal) / 0.85)"]}
-              />
-              <div className="space-y-2">
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand-teal/75">Free initial consultation</p>
-                <h3 className="font-heading text-3xl text-brand-navy">Get clear direction before you spend a penny</h3>
-                <p className="max-w-2xl text-brand-teal/85">
-                  We&apos;ll get to know you and your business, then map what you actually need first. No pressure, just clear next steps.
-                </p>
-              </div>
-              <Button asChild variant="accent" size="lg" className="mt-5 md:mt-0">
-                <Link href="/contact">Book your free consultation</Link>
+      <section className="relative overflow-hidden py-16 md:py-24">
+        <div className="topo-pattern absolute inset-0 opacity-40" />
+        <div className="container relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <BlurFade className="space-y-8" delay={0.05} duration={0.9} viewportAmount={0.15}>
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-teal/80">
+              <span className="h-2 w-2 rounded-full bg-brand-teal" />
+              {basecampPage.hero.badge}
+            </div>
+            <div className="space-y-6">
+              <h1 className="max-w-4xl font-heading text-5xl leading-[1.02] text-brand-navy md:text-7xl">
+                {basecampPage.hero.title}
+              </h1>
+              <p className="max-w-2xl text-lg leading-8 text-brand-teal/82 md:text-xl">{basecampPage.hero.description}</p>
+            </div>
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Button asChild variant="accent" size="lg">
+                <Link href={basecampPage.hero.primaryCta.href}>{basecampPage.hero.primaryCta.label}</Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <Link href={basecampPage.hero.secondaryCta.href}>{basecampPage.hero.secondaryCta.label}</Link>
               </Button>
             </div>
           </BlurFade>
-          <BlurFade delay={0.06} duration={0.9} viewportAmount={0.25}>
-            <div className="flex flex-wrap items-end justify-between gap-6 pt-5">
-              <div className="max-w-3xl space-y-4">
-                <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Services</p>
-                <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">What&apos;s on offer?</h2>
-                <p className="max-w-2xl text-lg text-brand-teal/85 md:text-xl">
-                  Practical websites to showcase your business and offer the right support where your business needs it.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
 
-          <div className="grid gap-6 lg:grid-cols-3">
-            {servicePillars.map((pillar, index) => (
-              <BlurFade key={pillar.title} delay={taperedDelay(index, 0.12)} duration={0.94} viewportAmount={0.2}>
-                <Card className="relative h-full overflow-hidden">
-                  {index === 1 ? (
-                    <ThemedShineBorder
-                      borderWidth={1.4}
-                      duration={16}
-                      className="opacity-55"
-                      lightShineColor={["hsl(var(--brand-teal) / 0.7)", "hsl(var(--brand-orange) / 0.8)"]}
-                      darkShineColor={["white", "hsl(var(--brand-orange) / 0.9)"]}
-                    />
-                  ) : null}
-                  <CardContent className="space-y-4 p-7">
-                    <h3 className="font-heading text-3xl text-brand-navy">{pillar.title}</h3>
-                    <p className="text-brand-teal/85">{pillar.copy}</p>
-                    <ul className="space-y-2">
-                      {pillar.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-brand-teal/80 pl-4">
-                          <span aria-hidden className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-orange/80" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={0.18} duration={0.95} viewportAmount={0.15}>
+            <IllustrationPanel
+              icon="mountain"
+              eyebrow="Business-ready systems"
+              title="Storefronts, payments, and internal tooling built with a steady pace."
+              description="The stack stays as lean as it can be without cutting corners, and the delivery model stays visible from scope through launch."
+              className="min-h-[520px]"
+            >
+              <div className="w-fit rounded-[1.5rem] border border-white/10 bg-white/10 px-5 py-4 backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 font-heading text-xl text-white">
+                    $
+                  </span>
+                  <div>
+                    <p className="font-heading text-2xl">{basecampPage.hero.highlight.title}</p>
+                    <p className="text-sm text-white/72">{basecampPage.hero.highlight.description}</p>
+                  </div>
+                </div>
+              </div>
+            </IllustrationPanel>
+          </BlurFade>
+        </div>
+      </section>
+
+      <Section className="border-y border-brand-navy/10 bg-white/65">
+        <SectionHeading
+          eyebrow={basecampPage.methodology.eyebrow}
+          title={basecampPage.methodology.title}
+          className="mb-10"
+        />
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {basecampPage.methodology.items.map((item, index) => (
+            <BlurFade
+              key={item.title}
+              delay={taperedDelay(index, 0.1)}
+              duration={0.92}
+              viewportAmount={0.2}
+              className={index === 0 || index === 3 ? "md:col-span-2" : undefined}
+            >
+              <FeatureCard
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+                tone={item.tone}
+                note={item.note}
+                quote={item.quote}
+                align={item.align}
+              />
+            </BlurFade>
+          ))}
         </div>
       </Section>
 
-      <Section className="bg-brand-sand/40">
-        <BlurFade delay={0.08} duration={0.9} viewportAmount={0.25}>
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-2xl space-y-4">
-              <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Featured Work</p>
-              <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">Selected projects with practical outcomes.</h2>
-            </div>
-            <Button asChild variant="outline">
-              <Link href="/work">View all work</Link>
-            </Button>
-          </div>
-        </BlurFade>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {projects.slice(0, 2).map((project, index) => (
-            <BlurFade key={project.slug} delay={taperedDelay(index, 0.16)} duration={0.94} viewportAmount={0.2}>
+      <Section id="projects">
+        <SectionHeading
+          eyebrow={basecampPage.portfolio.eyebrow}
+          title={basecampPage.portfolio.title}
+          description={basecampPage.portfolio.description}
+          className="mb-10"
+        />
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {projects.slice(0, 3).map((project, index) => (
+            <BlurFade key={project.slug} delay={taperedDelay(index, 0.14)} duration={0.94} viewportAmount={0.2}>
               <ProjectCard project={project} />
             </BlurFade>
           ))}
         </div>
       </Section>
 
-      <Section>
-        <BlurFade className="mb-10 max-w-3xl space-y-4" delay={0.08} duration={0.9} viewportAmount={0.25}>
-          <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Process</p>
-          <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">Simple project flow with clear checkpoints.</h2>
-        </BlurFade>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {process.map((step, index) => (
-            <BlurFade key={step.title} delay={taperedDelay(index, 0.14)} duration={0.94} viewportAmount={0.2}>
-              <Card className="h-full">
-                <CardContent className="space-y-3 p-7">
-                  <h3 className="font-heading text-3xl text-brand-navy">{step.title}</h3>
-                  <p className="text-brand-teal/85">{step.copy}</p>
-                </CardContent>
-              </Card>
+      <Section className="bg-brand-sand/35">
+        <SectionHeading
+          eyebrow={basecampPage.specialties.eyebrow}
+          title={basecampPage.specialties.title}
+          description={basecampPage.specialties.description}
+          className="mb-12"
+        />
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {basecampPage.specialties.items.map((item, index) => (
+            <BlurFade key={item.title} delay={taperedDelay(index, 0.08)} duration={0.9} viewportAmount={0.2}>
+              <div className="h-full rounded-[1.75rem] border border-brand-navy/10 bg-white/80 p-6 shadow-[0_18px_40px_-36px_rgba(12,45,41,0.55)]">
+                <h3 className="font-heading text-2xl text-brand-navy">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-brand-teal/82">{item.description}</p>
+              </div>
             </BlurFade>
           ))}
         </div>
       </Section>
 
-      <Section>
-        <div className="space-y-10">
-          <BlurFade className="max-w-3xl space-y-4" delay={0.08} duration={0.9} viewportAmount={0.25}>
-            <p className="text-sm uppercase tracking-[0.16em] text-brand-teal/75">Working Style</p>
-            <h2 className="font-heading text-4xl text-brand-navy md:text-5xl">Calm delivery, clear communication, no bloat</h2>
-          </BlurFade>
-          <div className="grid gap-6 md:grid-cols-3">
-            {collaboration.map((item, index) => (
-              <BlurFade key={item.title} delay={taperedDelay(index, 0.14)} duration={0.94} viewportAmount={0.2}>
-                <Card className="h-full">
-                  <CardContent className="space-y-3 p-7">
-                    <h3 className="font-heading text-3xl text-brand-navy">{item.title}</h3>
-                    <p className="text-brand-teal/85">{item.copy}</p>
-                  </CardContent>
-                </Card>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      <CTASection
-        title="Need a dependable developer?"
-        description="I work with a small number of clients at a time, so each project gets focused attention and steady delivery."
-      />
+      <CTASection {...basecampPage.cta} />
     </>
   );
 }

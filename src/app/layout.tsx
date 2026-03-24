@@ -13,9 +13,9 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   ...buildMetadata({
-    title: "Remote Creations | Freelance Web Developer",
+    title: "Remote Creations | Reliable Software for Growing Businesses",
     description:
-      "Remote Creations is a solo freelance development studio building reliable websites and apps for small and medium businesses.",
+      "Reliable software for growing businesses, from custom storefronts to payments and practical internal tools.",
     path: "/"
   })
 };
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-font-style="retro-modern" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
           <div className="min-h-screen bg-background text-foreground transition-colors">

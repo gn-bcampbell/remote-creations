@@ -1,0 +1,1304 @@
+<!-- Process (The Trail) - Updated -->
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Trail | Remote Creations Process</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#abcec6",
+                        "outline": "#727877",
+                        "on-secondary-fixed": "#0a1e26",
+                        "surface-container-highest": "#e1e3e2",
+                        "on-secondary-container": "#52656f",
+                        "inverse-on-surface": "#eff1f0",
+                        "tertiary": "#252a1a",
+                        "tertiary-container": "#3b402f",
+                        "surface-variant": "#e1e3e2",
+                        "secondary-container": "#cee3ee",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d1e6f0",
+                        "on-tertiary-fixed": "#191d0e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#374952",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8faf9",
+                        "secondary-fixed-dim": "#b5cad4",
+                        "secondary": "#4e616a",
+                        "surface-dim": "#d8dad9",
+                        "on-surface-variant": "#424847",
+                        "on-primary-container": "#8eb0a9",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3131",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "primary": "#0c2d29",
+                        "outline-variant": "#c2c8c6",
+                        "on-background": "#191c1c",
+                        "surface-container-high": "#e6e9e8",
+                        "tertiary-fixed": "#e0e5cc",
+                        "surface": "#f8faf9",
+                        "primary-fixed": "#c7eae2",
+                        "on-surface": "#191c1c",
+                        "surface-bright": "#f8faf9",
+                        "on-tertiary-container": "#a7ac95",
+                        "on-primary-fixed": "#00201c",
+                        "primary-container": "#24443e",
+                        "on-primary-fixed-variant": "#2d4c47",
+                        "surface-tint": "#44645f",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceeed",
+                        "surface-container-low": "#f2f4f3",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#abcec6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .topographic-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 400C50 350 100 380 150 350C200 320 250 340 300 300C350 260 400 290 400 250V0H0V400Z' fill='none' stroke='%230c2d29' stroke-opacity='0.05'/%3E%3Cpath d='M0 350C60 300 120 330 180 300C240 270 300 290 360 250C420 210 480 240 480 200' fill='none' stroke='%230c2d29' stroke-opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        .trail-gradient {
+            background: linear-gradient(135deg, #0c2d29 0%, #24443e 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body antialiased">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-sm dark:shadow-none">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-extrabold tracking-tighter text-emerald-950 dark:text-emerald-50 font-headline">
+                Remote Creations
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="font-manrope font-bold tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors"
+                    href="#">Basecamp</a>
+                <a class="font-manrope font-bold tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors"
+                    href="#">The Gear</a>
+                <a class="font-manrope font-bold tracking-tight text-sm text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1"
+                    href="#">The Trail</a>
+                <a class="font-manrope font-bold tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors"
+                    href="#">The Peak</a>
+            </div>
+            <button
+                class="trail-gradient text-on-primary px-5 py-2 rounded-lg font-headline font-bold text-sm scale-95 duration-200 ease-in-out hover:scale-100">
+                Start Ascent
+            </button>
+        </nav>
+    </header>
+    <main class="pt-24 topographic-bg min-h-screen">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-8 py-16 md:py-24 grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <span class="text-secondary font-label uppercase tracking-widest text-xs font-semibold mb-4 block">Our
+                    Methodology</span>
+                <h1
+                    class="text-primary font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-8">
+                    The Path to <span class="text-on-primary-container">Growing Your Business.</span></h1>
+                <p class="text-secondary text-xl leading-relaxed max-w-xl mb-10">Building a digital presence shouldn't
+                    feel like a solo climb. We partner with local shops and service providers to create clear, simple
+                    paths from your first idea to a thriving online business.</p>
+                <div class="flex items-center gap-4">
+                    <div class="flex -space-x-3">
+                        <img class="w-12 h-12 rounded-full border-4 border-surface shadow-sm object-cover"
+                            data-alt="portrait of a professional creative director in a minimalist studio setting with natural light"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7_NYJcR-lVcpNEBboDdSeZhBeK5wXVawc4LtarHrF3mqAXZ1ydb1v-UIQNU5f4WT-h86g33BcuHEScM_k2sF3NuJMc9T517zxj8hPNYVCaxlqaOsWliLPkY7mDttGbmVei_VLzn3UHTg5DlmRFNuMitPsq19lPsPOutolWl3jKquIGfmPJdaP8LLjxUhfFvaOk0oNOxrZkEkoYLOj0ZK9L7NR3gmVIImAjGoQ9enRF4-wOmDtqPA2oYau-NXbsKijCY2Bc5tWfRE" />
+                        <img class="w-12 h-12 rounded-full border-4 border-surface shadow-sm object-cover"
+                            data-alt="smiling woman in a modern workspace with lush green plants and soft morning light"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVX_si-1vfIFaECeA62zQ9TsFBZyh0aPfoB51mKXFVzfg7NiwIH8ExEoGPtKvu_1P2oAp1Prr8rBTDY42tk8PObNexh2OW9bBHPFwj_EsFeW00abpNNASJOT7XU9BFSzztdpOZRm5Vf2WbXgNkG-hpNaHWD6mSdnBK8qB7FKffjbeD71polOy5q-rw17Zhz6maEZVlnar4_eSEBgwc_IHgHTsdLCNsg7hg3XKEOZ5Wrym0iSdFBQS9YVTTybkEtYzpE5oxcpi-lvE" />
+                        <img class="w-12 h-12 rounded-full border-4 border-surface shadow-sm object-cover"
+                            data-alt="focused man wearing glasses working on a high-end laptop in a bright airy office environment"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzYWz-pRoJ-_am5Jpx5jb42Xa_EFLpQ3hSYkNVR-jryOYY33x-NdrBul3nLa0Knda8VhMct9Iq2sewH5RS08wYobj8flcBbfeM0x0cZAcYvKPc63ZdO8RwxmhA5SGWySxwRy3cv2BemZr1xfw-YabcKP7YKbWpVYC0z7rz49aLgfvaD5DAceN7D7To6qHBCWT2nlYwji9dH0pJ23W3mrEKSbuLExu2ldts3ZC4TCbaBR9D0Y5FAFbE_kk6sLdZme9qUSKjWVQLRPQ" />
+                    </div>
+                    <span class="text-sm font-medium text-primary">Trusted by 50+ remote-first teams</span>
+                </div>
+            </div>
+            <div class="md:col-span-5 relative">
+                <div class="aspect-square bg-surface-container rounded-full flex items-center justify-center p-8">
+                    <img class="rounded-xl shadow-2xl w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700"
+                        data-alt="majestic high mountain peaks under a clear blue sky with sharp ridges and soft alpine shadows"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBygtTllkNOPfXPxDsU0gbP0us5ZjY0hc3XwmHG8NFqbxkI1TEXPltooE8p_vcmEEiM9nBtEeZ6mlm5EJYPh9Pv2jb_EpJsSYx7RwfqPgDDbtn-X8mSOFe5J0fy3FflqTaOBqO5KW04AGBr0FwPnUBdWYGiwhG5Mp5C4cSFXDuEUX2TDJdo7_9tU77yqaq-yVkYDJPiV6sw8Aew_2gyP_zCDNgmDG2F2Fj8VF7Aprp5HPLtDie5vjpagW08qfxOIXclK9bGcA1naTU" />
+                </div>
+                <div
+                    class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-lg border border-outline-variant/10">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-3xl">map</span>
+                        <div>
+                            <p class="text-xs font-bold text-secondary uppercase tracking-tighter">Current Elevation</p>
+                            <p class="text-lg font-black text-primary">Discovery Phase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Process Stepper (Vertical for editorial feel) -->
+        <section class="max-w-5xl mx-auto px-8 py-24">
+            <div class="space-y-32">
+                <!-- Step 1 -->
+                <div class="relative grid md:grid-cols-2 gap-16 items-start">
+                    <div class="sticky top-32">
+                        <div class="flex items-center gap-6 mb-4">
+                            <span
+                                class="w-12 h-12 rounded-lg trail-gradient text-on-primary flex items-center justify-center font-headline font-black text-xl">01</span>
+                            <span class="text-primary font-headline text-3xl font-bold">Discovery</span>
+                        </div>
+                        <h3 class="text-secondary font-headline text-xl mb-6">Planning Your Growth</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">We start by getting to know your
+                            business and your customers. Through simple conversations and audits of your current setup,
+                            we find the best ways to help you grow and map out a clear plan together.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-sm font-medium text-primary"><span
+                                    class="material-symbols-outlined text-emerald-600"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span> Understanding Your
+                                Business</li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-primary">
+                                <span class="material-symbols-outlined text-emerald-600"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Stakeholder Interviews
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-medium text-primary">
+                                <span class="material-symbols-outlined text-emerald-600"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Strategic Roadmap Delivery
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-surface-container-low rounded-xl p-2 aspect-[4/5] overflow-hidden group">
+                        <img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                            data-alt="close-up of a detailed paper topographic map with a compass and wooden pencil on a dark surface"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz7kFGNabuHOEaZfeGLIKQ7Ih0RZSjjRIBHDjDHHf3mcXPXop9KJgyedU_SmGsrhsQn__d9wjgEaa028nxxekRclSJtlubrrhJxKQZvPQNjvphJAXJiCd3BP-6fmqgBLfWRZwxPAHpC05vG6-BcgiIT2qviNyG9mCmrQuccfMQxwccqS04iF_zF5YEb0AFzXeTJfqYeUUkcsldPM6Id_VMYv-mlO7H8bVEsYlEungtopMbVcNBRc4dy3GA8AXQMNF87UViQcfFQo0" />
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative grid md:grid-cols-2 gap-16 items-start">
+                    <div class="md:order-2 sticky top-32">
+                        <div class="flex items-center gap-6 mb-4">
+                            <span
+                                class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline font-black text-xl">02</span>
+                            <span class="text-primary font-headline text-3xl font-bold">Development</span>
+                        </div>
+                        <h3 class="text-secondary font-headline text-xl mb-6">Building Your Storefront</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">This is where we build the tools your
+                            business needs. Our team works carefully to create your site or app, giving you regular
+                            video walkthroughs and simple updates so you always know what's happening.</p>
+                        <div class="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
+                            <p class="text-sm italic text-primary font-medium">"We work around the clock to ensure your
+                                project stays on schedule, so you can stay focused on running your daily business
+                                operations."</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-low rounded-xl p-2 aspect-[4/5] overflow-hidden group">
+                        <img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                            data-alt="diverse group of developers collaborating on code with multiple screens in a modern industrial office space"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZCVW7gjpqcyHJ_oAKCoRnusPWUa3lG7r5oamhC1vvMwL6KoyC6dMCz-IXSXAS3X-y-mhS_6zRyQgcuIOvMwxvN5ISugPMrZjUi-5QaqHQlAaU34BpF-_AzNDkKysLvEtLU7GltT4zfknPZjK4J8N5yYSZ1geLFhdz6pGDx2VEfHxIECpKZWEBXb2oewphQF4nbCKbaPf2aRrKUqiNsndxWPofK_YpQTwoR2LMYi49lUTOS7wZhEsbrLCxzIMtJ2Yq8874Br-qDqk" />
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative grid md:grid-cols-2 gap-16 items-start">
+                    <div class="sticky top-32">
+                        <div class="flex items-center gap-6 mb-4">
+                            <span
+                                class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline font-black text-xl">03</span>
+                            <span class="text-primary font-headline text-3xl font-bold">Testing</span>
+                        </div>
+                        <h3 class="text-secondary font-headline text-xl mb-6">Final Walkthrough</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">Before we go live, we check every detail
+                            together. We test everything thoroughly and listen to your feedback to make sure the final
+                            result is exactly what your customers need and built to last.</p>
+                        <div class="flex gap-4">
+                            <div class="flex-1 bg-surface-container-lowest p-4 rounded-lg shadow-sm">
+                                <span class="text-2xl font-black text-primary">99.9%</span>
+                                <p class="text-xs text-secondary font-bold uppercase">Uptime Goal</p>
+                            </div>
+                            <div class="flex-1 bg-surface-container-lowest p-4 rounded-lg shadow-sm">
+                                <span class="text-2xl font-black text-primary">100+</span>
+                                <p class="text-xs text-secondary font-bold uppercase">Success Milestones</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-low rounded-xl p-2 aspect-[4/5] overflow-hidden group">
+                        <img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                            data-alt="clean minimal desk setup with a high-resolution tablet displaying data visualizations and analytic charts"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnRaehrVsxHtAKeBWyQhSlgebccO8NfgYFkVzH_TlMDTw7oyNw6X9wddT4IyYLWOXr2REdNAcHMHJUDn7QL8NYMkuo6TT7O9BiSHOOMIGc4kPUKo9g2AvPiC5vI9pJJfiYUgXmFHltwvzjJwUC59WFxzWwDe91hxVQHec93tYsAlpUw8qjfOGJylvw1fCa100PUXlGoKJaJadXS21Ku0xjG1eRX54_33Dk8iBf7lGw_wUciWAecnNvsXMQ1Bld7a2og1WiL2OiIJk" />
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative grid md:grid-cols-2 gap-16 items-start">
+                    <div class="md:order-2 sticky top-32">
+                        <div class="flex items-center gap-6 mb-4">
+                            <span
+                                class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-headline font-black text-xl">04</span>
+                            <span class="text-primary font-headline text-3xl font-bold">Launch</span>
+                        </div>
+                        <h3 class="text-secondary font-headline text-xl mb-6">Opening Your Doors</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">Launching is just the start of our
+                            partnership. We help you transition smoothly and provide all the simple guides and support
+                            you need to keep your business running successfully for the long haul.</p>
+                        <button
+                            class="trail-gradient text-on-primary w-full py-4 rounded-lg font-headline font-bold flex items-center justify-center gap-3">Grow
+                            Your Business Today <span class="material-symbols-outlined">north_east</span></button>
+                    </div>
+                    <div class="bg-surface-container-low rounded-xl p-2 aspect-[4/5] overflow-hidden group">
+                        <img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
+                            data-alt="stunning wide shot of a climber standing at the peak of a snowy mountain overlooking a sea of clouds"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnPM4RcFLUFRsSQFHOMOH9ssHaVFDFnivM7q6I7SNFEXb-k8aRnUz8qvz_CrXQwqHcnsRVklakZpUp7CMWSV4Ugryh-9yEQcj-iIi7o9AE1n_mjxx3oWfLHZ0EvZResmeQdGQtGc24Oh3--OjuW4c02aEoh6toXetk6GBNzv2Pm4W5eRULxk5SL8RlQfu82yCrKIQYcZoORQaSca6DtIr35kz3I83zouSE_WtPrzNNt0WhGigqb5OMh8mLz_shJcYOv7_6k5yBsnE" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="max-w-7xl mx-auto px-8 py-24">
+            <div
+                class="trail-gradient rounded-[2rem] p-12 md:p-24 text-center text-on-primary relative overflow-hidden">
+                <div class="absolute inset-0 topographic-bg opacity-10"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-6xl font-headline font-black mb-8 leading-tight">Ready to take your
+                        business <br />to the next level?</h2>
+                    <p class="text-on-primary-container text-lg max-w-2xl mx-auto mb-12 opacity-90">Our process is built
+                        for small business owners who value clarity, speed, and real results. Let's start growing your
+                        business together today.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-4">
+                        <button
+                            class="bg-surface-container-lowest text-primary px-10 py-4 rounded-lg font-bold font-headline hover:bg-surface-bright transition-colors">Book
+                            Discovery Call</button>
+                        <button
+                            class="bg-primary-container border border-on-primary-container/20 px-10 py-4 rounded-lg font-bold font-headline hover:bg-primary transition-colors">View
+                            Our Work</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+            <div class="font-black text-emerald-950 dark:text-emerald-50 font-headline">
+                Remote Creations.
+            </div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">Github</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+            </div>
+            <p class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500">
+                © 2024 Remote Creations. Built at high altitude.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Services & Expertise (The Gear) - Updated -->
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#abcec6",
+                        "outline": "#727877",
+                        "on-secondary-fixed": "#0a1e26",
+                        "surface-container-highest": "#e1e3e2",
+                        "on-secondary-container": "#52656f",
+                        "inverse-on-surface": "#eff1f0",
+                        "tertiary": "#252a1a",
+                        "tertiary-container": "#3b402f",
+                        "surface-variant": "#e1e3e2",
+                        "secondary-container": "#cee3ee",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d1e6f0",
+                        "on-tertiary-fixed": "#191d0e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#374952",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8faf9",
+                        "secondary-fixed-dim": "#b5cad4",
+                        "secondary": "#4e616a",
+                        "surface-dim": "#d8dad9",
+                        "on-surface-variant": "#424847",
+                        "on-primary-container": "#8eb0a9",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3131",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "primary": "#0c2d29",
+                        "outline-variant": "#c2c8c6",
+                        "on-background": "#191c1c",
+                        "surface-container-high": "#e6e9e8",
+                        "tertiary-fixed": "#e0e5cc",
+                        "surface": "#f8faf9",
+                        "primary-fixed": "#c7eae2",
+                        "on-surface": "#191c1c",
+                        "surface-bright": "#f8faf9",
+                        "on-tertiary-container": "#a7ac95",
+                        "on-primary-fixed": "#00201c",
+                        "primary-container": "#24443e",
+                        "on-primary-fixed-variant": "#2d4c47",
+                        "surface-tint": "#44645f",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceeed",
+                        "surface-container-low": "#f2f4f3",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#abcec6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .bg-trail-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.83 3.83-1.414 1.414L46.143 0h2.83zM11.03 0L7.2 3.83 8.613 5.244 13.857 0h-2.828zM43.314 0l6.83 6.83-1.415 1.413L40.485 0h2.83zM16.686 0L9.857 6.83l1.415 1.413L19.515 0h-2.83zM37.657 0l9.83 9.83-1.415 1.415L34.83 0h2.827zM22.343 0L12.515 9.83l1.414 1.415L25.172 0h-2.83zM32 0l12.83 12.83-1.415 1.414L29.172 0H32zM28 0L15.172 12.83l1.415 1.414L30.828 0H28z' fill='%230c2d29' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed-dim">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-sm dark:shadow-none">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-extrabold tracking-tighter text-emerald-950 dark:text-emerald-50 font-headline">
+                Remote Creations
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-bold tracking-tight text-sm"
+                    href="#">Basecamp</a>
+                <a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1 font-headline font-bold tracking-tight text-sm"
+                    href="#">The Gear</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-bold tracking-tight text-sm"
+                    href="#">The Trail</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors font-headline font-bold tracking-tight text-sm"
+                    href="#">The Peak</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-6 py-2 rounded-lg font-headline font-bold text-sm hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/10">
+                Start Growing
+            </button>
+        </div>
+    </nav>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative px-8 py-24 overflow-hidden bg-trail-pattern">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span
+                        class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase rounded-full">Local
+                        Growth Partners</span>
+                    <h1
+                        class="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] tracking-tighter">
+                        Practical tools for your next <span class="text-surface-tint">big move</span>.
+                    </h1>
+                    <p class="text-lg text-secondary max-w-xl leading-relaxed">
+                        With over 7 years of helping local businesses thrive, we build the simple, reliable digital
+                        tools you need to sell more, book faster, and grow your brand.
+                    </p>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-square bg-surface-container rounded-xl overflow-hidden shadow-2xl">
+                        <img class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700"
+                            data-alt="A friendly, local business owner working in a clean, modern cafe environment using a laptop"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaJBiRqR3VhCluMXbZ0DlJCWMimkYLl1hMnsDdlGypXMAIRKvZ_NXBpuAdD2RaERFgUwmy2qjKYb8HhR8WYL6RggMDnxkTTBHijX6Mr3Bg92JnCon3e06Thac4dQuARyKujERdwUWdtO9EdAHVSjmUJ4eKgcQVjFxhAqeJPhsXLYY20obPJTnHBpacxOeU5doyy2Nojgwx4cp2xSYPNpih1pAT-I1XxdOXbYux7OKphINhMZcEglB021rA_XiqME3QoKkxlERxxyE" />
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-primary p-8 rounded-lg shadow-xl hidden md:block">
+                        <div class="text-on-primary font-headline text-4xl font-black">7+</div>
+                        <div class="text-on-primary/70 text-xs uppercase tracking-widest font-bold">Years of local
+                            support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Bento Grid -->
+        <section class="px-8 py-32 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-headline text-3xl font-bold text-primary tracking-tight">The Gear List</h2>
+                    <p class="text-secondary mt-2">Essential digital tools for the modern business owner.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Custom E-commerce Storefronts -->
+                    <div
+                        class="md:col-span-2 group relative bg-surface-container-low p-10 rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-500">
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div class="space-y-4">
+                                <div
+                                    class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-on-primary shadow-lg group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                                </div>
+                                <h3 class="font-headline text-2xl font-bold text-primary">Custom E-commerce</h3>
+                                <p class="text-secondary max-w-md leading-relaxed">
+                                    Sell your products online with a store that reflects your brand. No messy
+                                    templates—just a clean, easy-to-use shop that your customers will love to browse.
+                                </p>
+                            </div>
+                            <div class="mt-12 flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-surface-container-highest text-primary text-[10px] font-bold rounded-full">Shopify
+                                    Experts</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container-highest text-primary text-[10px] font-bold rounded-full">Mobile
+                                    Ready</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container-highest text-primary text-[10px] font-bold rounded-full">Inventory
+                                    Sync</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute right-0 bottom-0 w-1/3 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-[12rem]"
+                                data-icon="storefront">storefront</span>
+                        </div>
+                    </div>
+                    <!-- Seamless Payments (Stripe) -->
+                    <div class="group bg-primary p-10 rounded-xl flex flex-col justify-between shadow-2xl">
+                        <div class="space-y-4">
+                            <div
+                                class="w-12 h-12 bg-surface-tint rounded-lg flex items-center justify-center text-on-primary">
+                                <span class="material-symbols-outlined" data-icon="payments">payments</span>
+                            </div>
+                            <h3 class="font-headline text-2xl font-bold text-on-primary">Seamless Payments</h3>
+                            <p class="text-on-primary/70 text-sm leading-relaxed">
+                                Get paid faster and more securely. We integrate professional Stripe payment systems so
+                                you can accept all major credit cards with ease.
+                            </p>
+                        </div>
+                        <div class="mt-8 border-t border-on-primary/10 pt-6">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary-fixed-dim"
+                                    data-icon="security">security</span>
+                                <span class="text-on-primary text-xs font-bold uppercase tracking-widest">Stripe
+                                    Certified Setup</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Automated Booking -->
+                    <div
+                        class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all">
+                        <div class="space-y-4">
+                            <div
+                                class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container">
+                                <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+                            </div>
+                            <h3 class="font-headline text-2xl font-bold text-primary">Booking Systems</h3>
+                            <p class="text-secondary text-sm leading-relaxed">
+                                Stop the back-and-forth emails. We build automated scheduling systems that sync with
+                                your calendar and let clients book instantly.
+                            </p>
+                        </div>
+                        <ul class="mt-8 space-y-3">
+                            <li class="flex items-center gap-2 text-xs font-semibold text-primary">
+                                <span class="material-symbols-outlined text-[16px] text-surface-tint"
+                                    data-icon="check_circle">check_circle</span>
+                                Auto-Reminders
+                            </li>
+                            <li class="flex items-center gap-2 text-xs font-semibold text-primary">
+                                <span class="material-symbols-outlined text-[16px] text-surface-tint"
+                                    data-icon="check_circle">check_circle</span>
+                                Deposit Collection
+                            </li>
+                            <li class="flex items-center gap-2 text-xs font-semibold text-primary">
+                                <span class="material-symbols-outlined text-[16px] text-surface-tint"
+                                    data-icon="check_circle">check_circle</span>
+                                Calendar Sync
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Modernization Support (Small Card) -->
+                    <div
+                        class="md:col-span-2 bg-secondary-fixed p-10 rounded-xl flex flex-col md:flex-row gap-8 items-center border border-white/20">
+                        <div class="flex-1">
+                            <h4 class="font-headline font-bold text-xl text-primary mb-2">Upgrade Your Current Website
+                            </h4>
+                            <p class="text-on-secondary-fixed-variant text-sm">
+                                Is your current site feeling a bit slow or outdated? We help local businesses refresh
+                                their digital presence without any stress or downtime.
+                            </p>
+                        </div>
+                        <button
+                            class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold text-xs uppercase tracking-tighter whitespace-nowrap hover:shadow-xl transition-all">
+                            See Our Work
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Quality Commitment -->
+        <section class="px-8 py-24 bg-surface-container">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <h2 class="font-headline text-4xl font-extrabold text-primary tracking-tighter leading-tight">
+                            Tools Designed for <br />Real-World Business.
+                        </h2>
+                        <div class="mt-12 space-y-10">
+                            <div class="flex gap-6">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-surface-tint"
+                                        data-icon="favorite">favorite</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary">User-Friendly Design</h4>
+                                    <p class="text-secondary text-sm mt-1">We build for you and your customers. Our
+                                        tools are easy to manage daily, so you can focus on running your business, not
+                                        your website.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div
+                                    class="flex-shrink-0 w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-surface-tint"
+                                        data-icon="handshake">handshake</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary">Local Partnership</h4>
+                                    <p class="text-secondary text-sm mt-1">We aren't a giant agency. We're your
+                                        neighbors who happen to be experts in web tools. We're here when you need help
+                                        or have a question.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img class="rounded-lg shadow-lg aspect-[4/5] object-cover"
+                            data-alt="A clean, organized small business workspace with a focus on a retail counter and modern point-of-sale system"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbsm3XWA8VTr13gLH0NwgZl2gxNiQKOGqRiRhiYLwJ7kU5kvmTwCEm7NSNjMmuB1yIVGmV3F3Y-kmECFiKwOe14_jG70l0XojQcxFs1y7KNevmknF1i7Ib6GKr5rw334OI8L_xKfG4i8DLM0eRBXL9wlcgoJHouTN4onhtmNHYd6OSKEIaqLV9aL5WT7x4WIPXJvKXppd14AFz8WEV4eFmRis_GohkI-Uj0RLgsKXxOODL06wtTufgq2dMAeqSAXM7_7btRP3pExk" />
+                        <img class="rounded-lg shadow-lg aspect-[4/5] object-cover mt-12"
+                            data-alt="Close-up of a hand using a modern smartphone to make a quick purchase in a local boutique shop"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS8Voaei2s8g1xO2iCxfrbxfiV4xpEzOwmGwikk3otXWlBYo4774jJrE5KFkZSPC0meMNhzsabKDmEHPA5jRyiX_0MjeY3ydWhyGLMdb9L45TM6ako9RNGlf9CLADuDA2rEHAfb_ziO1hkZs9gwL9NYQfKuukb5GZRv1plFNH2Cz-3CFy4IxLMqQucgNQKg6yV555CpBuPeSgGk34RKAfN9cjrKy9CuGqvLTeyN-_Ha6dFJn2FvMKNOSQAWwAOPkDNkDeUqIJOSiw" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8 mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+            <div class="font-black text-emerald-950 dark:text-emerald-50 font-headline">
+                Remote Creations.
+            </div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">Instagram</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+            </div>
+            <p class="font-manrope text-xs tracking-widest uppercase text-slate-500 dark:text-slate-500">
+                © 2024 Remote Creations. Helping local businesses scale.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Landing Page (Basecamp) - Updated -->
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Remote Creations | Reliable Software for Growing Businesses</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#abcec6",
+                        "outline": "#727877",
+                        "on-secondary-fixed": "#0a1e26",
+                        "surface-container-highest": "#e1e3e2",
+                        "on-secondary-container": "#52656f",
+                        "inverse-on-surface": "#eff1f0",
+                        "tertiary": "#252a1a",
+                        "tertiary-container": "#3b402f",
+                        "surface-variant": "#e1e3e2",
+                        "secondary-container": "#cee3ee",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d1e6f0",
+                        "on-tertiary-fixed": "#191d0e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#374952",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8faf9",
+                        "secondary-fixed-dim": "#b5cad4",
+                        "secondary": "#4e616a",
+                        "surface-dim": "#d8dad9",
+                        "on-surface-variant": "#424847",
+                        "on-primary-container": "#8eb0a9",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3131",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "primary": "#0c2d29",
+                        "outline-variant": "#c2c8c6",
+                        "on-background": "#191c1c",
+                        "surface-container-high": "#e6e9e8",
+                        "tertiary-fixed": "#e0e5cc",
+                        "surface": "#f8faf9",
+                        "primary-fixed": "#c7eae2",
+                        "on-surface": "#191c1c",
+                        "surface-bright": "#f8faf9",
+                        "on-tertiary-container": "#a7ac95",
+                        "on-primary-fixed": "#00201c",
+                        "primary-container": "#24443e",
+                        "on-primary-fixed-variant": "#2d4c47",
+                        "surface-tint": "#44645f",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceeed",
+                        "surface-container-low": "#f2f4f3",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#abcec6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .topo-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 Q 50 10 90 90 M0 30 Q 40 30 80 110 M20 -10 Q 60 -10 100 70' stroke='%2344645f' stroke-width='0.5' fill='none' opacity='0.08'/%3E%3C/svg%3E");
+        }
+
+        .glass-nav {
+            background: rgba(248, 250, 249, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-extrabold tracking-tighter text-primary font-headline">Remote Creations</div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-headline font-bold tracking-tight text-sm text-primary border-b-2 border-primary pb-1"
+                    href="#projects">Basecamp</a>
+                <a class="font-headline font-bold tracking-tight text-sm text-secondary hover:text-primary transition-colors"
+                    href="#">The Gear</a>
+                <a class="font-headline font-bold tracking-tight text-sm text-secondary hover:text-primary transition-colors"
+                    href="#">The Trail</a>
+                <a class="font-headline font-bold tracking-tight text-sm text-secondary hover:text-primary transition-colors"
+                    href="#">The Peak</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary font-headline font-bold text-sm px-5 py-2.5 rounded shadow-sm hover:opacity-90 transition-all scale-95 active:scale-90">
+                Start Ascent
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 overflow-hidden min-h-screen flex items-center">
+        <div class="absolute inset-0 topo-pattern opacity-40 -z-10"></div>
+        <div class="max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1 rounded text-secondary font-label text-xs uppercase tracking-widest font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Available for Q4 Business Builds
+                </div>
+                <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight">
+                    Reliable. Scalable. <br />Business-Grade.
+                </h1>
+                <p class="text-secondary text-xl leading-relaxed max-w-lg">
+                    High-altitude software for growing businesses. From custom storefronts to seamless Stripe
+                    integrations, we build dependable tools that power your growth.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button
+                        class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-headline font-bold shadow-lg hover:shadow-xl transition-all">
+                        Start Your Ascent
+                    </button>
+                    <button
+                        class="bg-surface-container-high text-primary px-8 py-4 rounded-lg font-headline font-bold hover:bg-surface-container-highest transition-all">
+                        View Our Gear
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                        data-alt="Modern minimalist home office with large window overlooking a foggy mountain range at dawn, featuring a high-end laptop and wooden desk"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxX8graaT6qOouPMH3OVfG3CKU3b8ab4bmpDzI86NKcJc5hoVbMBSDRFaHj0Yr4BDzf8FsM1BBDhqVJHhhK_pVVuXpgYCC52yJSB8yLA0vQrAEf1ezdWU1_0n8rDlMPUSwJOiyOYBgtvQEF9P4JUAPfZD-H4hIZEEseMPFOixBLGgOiDUwmLS0UG-Mxmzk-OZcIj_ZnHdMtHKTnN06uMxPVNKyW6NWv9ztuyzqurhePzRhPcoqS88Ffvk-ULnXoZNhTnu1bPO6J3Q" />
+                </div>
+                <!-- Float Badge -->
+                <div
+                    class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-[240px]">
+                    <div class="flex items-center gap-3 mb-2 text-primary">
+                        <span class="material-symbols-outlined font-bold">payments</span>
+                        <span class="font-headline font-extrabold text-2xl">Stripe Pro</span>
+                    </div>
+                    <p class="text-secondary text-sm font-medium leading-snug">
+                        Certified implementation for complex checkout workflows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Value Props Bento -->
+    <section class="bg-surface-container-low py-24">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="mb-16">
+                <span class="text-secondary font-label font-bold uppercase tracking-widest text-xs">The
+                    Methodology</span>
+                <h2 class="font-headline text-4xl font-bold text-primary mt-2">Built for Business Stability</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Bento Item 1 -->
+                <div
+                    class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl border-outline-variant/10 border group hover:shadow-md transition-all">
+                    <div
+                        class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined text-3xl">storefront</span>
+                    </div>
+                    <h3 class="font-headline text-2xl font-extrabold text-primary mb-4">High-Performance Storefronts
+                    </h3>
+                    <p class="text-secondary leading-relaxed text-lg">
+                        We don't just build websites; we build revenue engines. Our custom-coded storefronts are
+                        optimized for conversion, sub-second load times, and seamless mobile shopping experiences that
+                        template builders can't match.
+                    </p>
+                </div>
+                <!-- Bento Item 2 -->
+                <div
+                    class="bg-primary text-on-primary p-10 rounded-xl flex flex-col justify-between overflow-hidden relative">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <span class="material-symbols-outlined text-9xl">inventory_2</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline text-2xl font-extrabold mb-4">Internal Tools</h3>
+                        <p class="text-primary-fixed-dim leading-relaxed">
+                            Custom inventory, CRM, and automation tools built to fit your specific business logic
+                            exactly.
+                        </p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span>
+                        <span
+                            class="text-xs font-label uppercase tracking-widest text-primary-fixed-dim font-bold">99.9%
+                            Uptime Focus</span>
+                    </div>
+                </div>
+                <!-- Bento Item 3 -->
+                <div class="bg-surface-container-high p-10 rounded-xl flex flex-col justify-center text-center">
+                    <div class="text-5xl font-headline font-black text-primary mb-2 tracking-tighter">Secure</div>
+                    <div class="text-secondary font-label text-sm uppercase font-bold tracking-widest">Stripe Integrated
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-outline-variant/20">
+                        <p class="text-on-surface-variant text-sm italic">"The inventory tool saved us 20 hours of
+                            manual data entry every single week."</p>
+                    </div>
+                </div>
+                <!-- Bento Item 4 -->
+                <div class="md:col-span-2 bg-surface p-1 rounded-xl">
+                    <div
+                        class="h-full w-full rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 relative min-h-[300px]">
+                        <img class="absolute inset-0 w-full h-full object-cover"
+                            data-alt="Distant silhouette of a hiker on a sharp mountain ridge under a clear morning sky with blue and grey tones"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8SSR6yB1yzSKFy5lu3qkQSssOcn53brTsCOhe4TR-UT6XbrFTyASMjGcsLj2JPAbWbCvJSntMBEx83qj8isUIAV8DWaClOyoapXZHG9x0Pb52XNY5VncYrIBsxAfT3B7rTJ1pfJBfbmgJraZjxSFv5IafcJ6m95rV2cbt_f_Y8Cp6N2SAuv7rnLnBaR5jgQW26v0EJxldO2CLTyZkeCmyPQtl4E55PAmId5JsOoX7L9-_uFfGI57CF9ZGcJa0ul3ENeOAnoMYGS0" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-10">
+                            <div>
+                                <h3 class="text-on-primary font-headline text-2xl font-bold">Uncompromising Reliability
+                                </h3>
+                                <p class="text-on-primary/70 max-w-md mt-2">Critical business infrastructure requires a
+                                    rock-solid foundation. We build for the long haul.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recent Ascents (Projects Section) -->
+    <section class="py-24 bg-background" id="projects">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="mb-16">
+                <span class="text-secondary font-label font-bold uppercase tracking-widest text-xs">The Portfolio</span>
+                <h2 class="font-headline text-4xl font-bold text-primary mt-2">Recent Ascents</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-high mb-6">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="High-end boutique e-commerce shop interface showing curated home goods"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6xX-X-f-6x" />
+                    </div>
+                    <div class="inline-flex items-center gap-2 text-primary mb-2">
+                        <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                        <span class="font-label text-xs font-bold uppercase tracking-widest">E-Commerce</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary mb-2">Alpine Living Boutique</h3>
+                    <p class="text-secondary text-sm leading-relaxed">A custom-coded storefront with advanced filtering
+                        and a bespoke Stripe-powered checkout flow for a luxury home goods brand.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-high mb-6">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Service booking calendar interface for a local plumbing and HVAC business"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A-A" />
+                    </div>
+                    <div class="inline-flex items-center gap-2 text-primary mb-2">
+                        <span class="material-symbols-outlined text-sm">calendar_month</span>
+                        <span class="font-label text-xs font-bold uppercase tracking-widest">Service Booking</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary mb-2">Summit HVAC Systems</h3>
+                    <p class="text-secondary text-sm leading-relaxed">Real-time scheduling and automated client
+                        notifications for a local service provider, reducing admin overhead by 40%.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-high mb-6">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Dashboard showing inventory levels and warehouse locations for a small retail store"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B-B" />
+                    </div>
+                    <div class="inline-flex items-center gap-2 text-primary mb-2">
+                        <span class="material-symbols-outlined text-sm">inventory</span>
+                        <span class="font-label text-xs font-bold uppercase tracking-widest">Internal Tool</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary mb-2">Ridge Outfitters Inventory</h3>
+                    <p class="text-secondary text-sm leading-relaxed">A custom inventory management tool for a
+                        multi-location retailer, featuring barcode scanning and automated restock alerts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-24 max-w-7xl mx-auto px-8 border-t border-outline-variant/10">
+        <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+            <div class="max-w-xl">
+                <span class="text-secondary font-label font-bold uppercase tracking-widest text-xs">Our Peaks</span>
+                <h2 class="font-headline text-4xl font-bold text-primary mt-2">Specialized Business Craftsmanship</h2>
+            </div>
+            <p class="text-secondary max-w-xs text-sm">Focused on high-impact software that solves real operational
+                bottlenecks for small and medium teams.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="space-y-4">
+                <div class="text-primary font-headline font-extrabold text-xl">01. Custom Storefronts</div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">High-performance shopping experiences that
+                    out-convert standard Shopify themes.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="text-primary font-headline font-extrabold text-xl">02. Stripe Integration</div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Advanced billing, subscriptions, and complex
+                    marketplace payment flows handled securely.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="text-primary font-headline font-extrabold text-xl">03. Business Software</div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Reliable internal tools, inventory systems,
+                    and CRMs that work as hard as you do.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="text-primary font-headline font-extrabold text-xl">04. Growth Strategy</div>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Consulting on the right tech stack to ensure
+                    your software scales with your success.</p>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="mb-24 px-8">
+        <div
+            class="max-w-7xl mx-auto bg-primary rounded-2xl p-16 md:p-24 relative overflow-hidden flex flex-col items-center text-center">
+            <div class="absolute top-0 left-0 w-full h-full topo-pattern opacity-10 pointer-events-none"></div>
+            <div class="relative z-10 max-w-2xl">
+                <h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-primary mb-8 leading-tight">Ready
+                    to build reliable software for your business?</h2>
+                <p class="text-primary-fixed-dim text-xl mb-12">Limited availability for Q4 project starts. Let's
+                    discuss your roadmap.</p>
+                <button
+                    class="bg-surface-container-lowest text-primary px-10 py-5 rounded-lg font-headline font-black text-lg shadow-2xl hover:scale-105 transition-all">
+                    Book a Strategy Call
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-100 w-full py-12 px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <div class="font-black text-primary font-headline text-xl">Remote Creations</div>
+                <p class="font-manrope text-xs tracking-widest uppercase text-slate-500">© 2024 Remote Creations.
+                    Reliable software at high altitude.</p>
+            </div>
+            <div class="flex gap-8">
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 hover:text-emerald-600 transition-all opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 hover:text-emerald-600 transition-all opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 hover:text-emerald-600 transition-all opacity-80 hover:opacity-100"
+                    href="#">Github</a>
+                <a class="font-manrope text-xs tracking-widest uppercase text-slate-500 hover:text-emerald-600 transition-all opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- Contact (The Peak) - Updated -->
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Peak | Remote Creations</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#abcec6",
+                        "outline": "#727877",
+                        "on-secondary-fixed": "#0a1e26",
+                        "surface-container-highest": "#e1e3e2",
+                        "on-secondary-container": "#52656f",
+                        "inverse-on-surface": "#eff1f0",
+                        "tertiary": "#252a1a",
+                        "tertiary-container": "#3b402f",
+                        "surface-variant": "#e1e3e2",
+                        "secondary-container": "#cee3ee",
+                        "on-tertiary-fixed-variant": "#444937",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d1e6f0",
+                        "on-tertiary-fixed": "#191d0e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#374952",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8faf9",
+                        "secondary-fixed-dim": "#b5cad4",
+                        "secondary": "#4e616a",
+                        "surface-dim": "#d8dad9",
+                        "on-surface-variant": "#424847",
+                        "on-primary-container": "#8eb0a9",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3131",
+                        "tertiary-fixed-dim": "#c4c9b1",
+                        "primary": "#0c2d29",
+                        "outline-variant": "#c2c8c6",
+                        "on-background": "#191c1c",
+                        "surface-container-high": "#e6e9e8",
+                        "tertiary-fixed": "#e0e5cc",
+                        "surface": "#f8faf9",
+                        "primary-fixed": "#c7eae2",
+                        "on-surface": "#191c1c",
+                        "surface-bright": "#f8faf9",
+                        "on-tertiary-container": "#a7ac95",
+                        "on-primary-fixed": "#00201c",
+                        "primary-container": "#24443e",
+                        "on-primary-fixed-variant": "#2d4c47",
+                        "surface-tint": "#44645f",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceeed",
+                        "surface-container-low": "#f2f4f3",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#abcec6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .alpine-gradient {
+            background: linear-gradient(135deg, #0c2d29 0%, #24443e 100%);
+        }
+
+        .topo-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 Q 50 10 50 50 T 90 90' stroke='%2344645f' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3Cpath d='M0 30 Q 40 30 40 70 T 80 110' stroke='%2344645f' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed-dim">
+    <!-- Top Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-lg shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-extrabold tracking-tighter text-emerald-950 font-headline">
+                Remote Creations
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-manrope font-bold tracking-tight text-sm">
+                <a class="text-slate-600 hover:text-emerald-800 transition-colors" href="#">Basecamp</a>
+                <a class="text-slate-600 hover:text-emerald-800 transition-colors" href="#">The Gear</a>
+                <a class="text-slate-600 hover:text-emerald-800 transition-colors" href="#">The Trail</a>
+                <a class="text-emerald-900 border-b-2 border-emerald-900 pb-1" href="#">The Peak</a>
+            </div>
+            <button
+                class="bg-primary hover:primary-container text-on-primary px-6 py-2.5 rounded-xl font-bold text-sm transition-all scale-95 hover:scale-100 active:scale-95">
+                Start Ascent
+            </button>
+        </nav>
+    </header>
+    <main class="pt-32 pb-24 px-6 md:px-8 max-w-7xl mx-auto topo-pattern">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <!-- Left Column: Context & Editorial -->
+            <div class="lg:col-span-5 flex flex-col justify-start">
+                <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-6 block">Final
+                    Elevation</span>
+                <h1
+                    class="font-headline text-5xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8">
+                    The Peak.
+                </h1>
+                <div class="space-y-12">
+                    <section>
+                        <h2 class="font-headline text-xl font-bold text-primary mb-4">Based in the mountains, working
+                            for the world.</h2>
+                        <p class="text-secondary leading-relaxed font-body">
+                            Remote Creations is a boutique digital consultancy specializing in small and medium business
+                            growth. We build reliable digital storefronts and straightforward solutions that help your
+                            brand thrive without the complexity of corporate overhead.
+                        </p>
+                    </section>
+                    <section class="bg-surface-container-low p-8 rounded-xl border-l-4 border-primary">
+                        <h3 class="font-headline text-lg font-bold text-primary mb-3">Why work with me?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">lightbulb</span>
+                                <span class="text-sm font-medium text-on-surface-variant">Straightforward solutions for
+                                    complex problems.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">shopping_bag</span>
+                                <span class="text-sm font-medium text-on-surface-variant">Reliable storefronts built for
+                                    conversion.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">support_agent</span>
+                                <span class="text-sm font-medium text-on-surface-variant">Personalized support for your
+                                    growing business.</span>
+                            </li>
+                        </ul>
+                    </section>
+                    <div class="relative rounded-xl overflow-hidden aspect-[16/9] shadow-lg group">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="dramatic wide angle shot of a solitary modern cabin on a foggy mountain ridge during blue hour with warm interior light"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeFwki7oFvMMSbmvOoPasqf9tK16O00cafgmwUrWrohkZs2WH80IqPCxoUjf2Nwf5KipjbNccPkXUInyCcY5ppWAwa_CRbO6iBy-wUCLxK-EXIqKFobEePKK7ElpHiG9MHUwNNDvvXu-qg33-S3LzYTCvLwqJ5nqtIamQWCe0s4vbsJE4yFYSJDl8xUIM3w4bH9hNkfmTRakJUqlWEUmgpQqw88t-2edMlSw1R-40lBvNFLYzCnjl-O2OF-yDmJ-B4OZriJaJvNjU" />
+                        <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: The Form -->
+            <div class="lg:col-span-7">
+                <div
+                    class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm border border-outline-variant/10">
+                    <form class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label
+                                    class="font-label text-xs font-bold text-secondary uppercase tracking-wider">Name</label>
+                                <input
+                                    class="w-full bg-surface-container-low border-none focus:ring-0 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container transition-all"
+                                    placeholder="Alex Sterling" type="text" />
+                                <div class="h-0.5 w-0 bg-primary transition-all duration-300 focus-within:w-full"></div>
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="font-label text-xs font-bold text-secondary uppercase tracking-wider">Company</label>
+                                <input
+                                    class="w-full bg-surface-container-low border-none focus:ring-0 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container transition-all"
+                                    placeholder="Summit Tech" type="text" />
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label text-xs font-bold text-secondary uppercase tracking-wider">Project
+                                Details</label>
+                            <textarea
+                                class="w-full bg-surface-container-low border-none focus:ring-0 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/40 focus:bg-surface-container transition-all resize-none"
+                                placeholder="Tell me about your trail... What are we building?" rows="5"></textarea>
+                        </div>
+                        <div class="space-y-4">
+                            <label class="font-label text-xs font-bold text-secondary uppercase tracking-wider">Budget
+                                Range</label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <button
+                                    class="px-4 py-3 text-xs font-bold rounded-xl bg-surface-container-low text-secondary hover:bg-primary hover:text-on-primary transition-all"
+                                    type="button">5k - 15k</button>
+                                <button
+                                    class="px-4 py-3 text-xs font-bold rounded-xl bg-primary text-on-primary transition-all shadow-md"
+                                    type="button">15k - 30k</button>
+                                <button
+                                    class="px-4 py-3 text-xs font-bold rounded-xl bg-surface-container-low text-secondary hover:bg-primary hover:text-on-primary transition-all"
+                                    type="button">30k - 60k</button>
+                                <button
+                                    class="px-4 py-3 text-xs font-bold rounded-xl bg-surface-container-low text-secondary hover:bg-primary hover:text-on-primary transition-all"
+                                    type="button">60k+</button>
+                            </div>
+                        </div>
+                        <div class="pt-6">
+                            <button
+                                class="alpine-gradient w-full py-4 text-on-primary font-headline font-extrabold text-lg rounded-xl shadow-xl hover:shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-3"
+                                type="submit">
+                                <span>Send Message</span>
+                                <span class="material-symbols-outlined" data-weight="fill">north_east</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div
+                        class="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 pt-12 border-t border-outline-variant/10">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-fixed">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="professional portrait of a man with a beard wearing high-end outdoor apparel, soft natural lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxXdYp8cR-Thgy_zcOOEuHFMlOzU2B95_ZP8yzAGzpZJrmqvYhxAmYWQK6KxnXZeRZiuKjKA3UhLIdZpsD2ialVSN-Rs9kHDFrLkygTedBKFJ9yJHAgDMSHqV0MBYiwrnx9WDAzGfF_NFwMHWTYoPFdyWOHNK-ukjy2ahcDnWOkQHd4TgeQJ9Ey4kK08c7yPk5FMd2NtcEvROqkLQ8MnCJbFOnM54D3evmP2KUrkKQ7VE0c5QrQ-y87SppP2oDCjIL_QX9hT8Jats" />
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-primary">Direct Response</p>
+                                <p class="text-xs text-secondary">Typically replies within 4 hours</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low text-primary hover:bg-primary hover:text-on-primary transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">alternate_email</span>
+                            </a>
+                            <a class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low text-primary hover:bg-primary hover:text-on-primary transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">video_call</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+            <div class="font-black text-emerald-950 dark:text-emerald-50 font-headline">
+                Remote Creations
+            </div>
+            <div class="flex gap-8 font-manrope text-xs tracking-widest uppercase text-slate-500">
+                <a class="hover:text-emerald-600 transition-all opacity-80 hover:opacity-100" href="#">Privacy
+                    Policy</a>
+                <a class="hover:text-emerald-600 transition-all opacity-80 hover:opacity-100" href="#">Terms of
+                    Service</a>
+                <a class="hover:text-emerald-600 transition-all opacity-80 hover:opacity-100" href="#">Github</a>
+                <a class="hover:text-emerald-600 transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+            </div>
+            <div class="font-manrope text-xs tracking-widest uppercase text-slate-500 opacity-80">
+                © 2024 Remote Creations. Built at high altitude.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

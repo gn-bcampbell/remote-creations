@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Remote Creations",
   description:
-    "Independent freelance developer helping small and medium businesses ship reliable websites and apps.",
+    "Reliable software for growing businesses, from storefronts and payments to the internal tools that keep operations moving.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://remote-creations.vercel.app",
   email: "hello@remotecreations.dev",
@@ -10,11 +10,10 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/bcampbell21",
   },
   navItems: [
-    { href: "/", label: "Home" },
-    { href: "/work", label: "Work" },
-    // { href: "/services", label: "Services" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Basecamp" },
+    { href: "/gear", label: "The Gear" },
+    { href: "/trail", label: "The Trail" },
+    { href: "/contact", label: "The Peak" },
   ],
 } as const;
 

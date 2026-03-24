@@ -15,72 +15,72 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    slug: "trailhead-bookings",
-    title: "Trailhead Bookings",
-    summary:
-      "Booking flow redesign and performance improvements for a seasonal travel business.",
-    category: "Web App",
-    role: "Product-focused freelance developer",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-    outcomes: [
-      "Reduced booking drop-off during checkout",
-      "Cut median page load times by over 35%",
-      "Improved maintainability with shared UI patterns",
-    ],
-    images: ["/projects/trailhead-bookings.svg"],
-    caseStudy: `## Overview
-A small travel operator needed a smoother way for customers to browse dates, compare cabin options, and complete bookings from mobile devices.
+  //   {
+  //     slug: "trailhead-bookings",
+  //     title: "Trailhead Bookings",
+  //     summary:
+  //       "Booking flow redesign and performance improvements for a seasonal travel business.",
+  //     category: "Web App",
+  //     role: "Product-focused freelance developer",
+  //     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+  //     outcomes: [
+  //       "Reduced booking drop-off during checkout",
+  //       "Cut median page load times by over 35%",
+  //       "Improved maintainability with shared UI patterns",
+  //     ],
+  //     images: ["/projects/trailhead-bookings.svg"],
+  //     caseStudy: `## Overview
+  // A small travel operator needed a smoother way for customers to browse dates, compare cabin options, and complete bookings from mobile devices.
 
-## Problem
-The previous site felt slow and confusing on phones. Users were abandoning the form at the pricing and availability steps.
+  // ## Problem
+  // The previous site felt slow and confusing on phones. Users were abandoning the form at the pricing and availability steps.
 
-## Approach
-- Mapped the current funnel and identified where users dropped off
-- Rebuilt the booking journey as a step-by-step flow with clearer progress states
-- Introduced server-rendered pages and lean client-side interactions to improve speed
-- Added lightweight analytics events to monitor conversion changes
+  // ## Approach
+  // - Mapped the current funnel and identified where users dropped off
+  // - Rebuilt the booking journey as a step-by-step flow with clearer progress states
+  // - Introduced server-rendered pages and lean client-side interactions to improve speed
+  // - Added lightweight analytics events to monitor conversion changes
 
-## Outcome
-The updated booking experience became faster and easier to navigate, especially on mobile. Conversion improved and customer support tickets around bookings dropped.
+  // ## Outcome
+  // The updated booking experience became faster and easier to navigate, especially on mobile. Conversion improved and customer support tickets around bookings dropped.
 
-## Lessons Learned
-- Simple language and clear step labels matter as much as visual polish
-- Performance wins are often the fastest path to better conversion`,
-  },
-  {
-    slug: "field-ops-dashboard",
-    title: "Field Ops Dashboard",
-    summary:
-      "Internal operations dashboard to plan schedules and track job completion for a service team.",
-    category: "Product Iteration",
-    role: "Part-time product engineer",
-    stack: ["Next.js", "React Query", "PostgreSQL", "shadcn/ui"],
-    outcomes: [
-      "Reduced weekly scheduling admin time",
-      "Unified reporting from multiple spreadsheets",
-      "Enabled safer release cycles with feature flags",
-    ],
-    images: ["/projects/field-ops-dashboard.svg"],
-    caseStudy: `## Overview
-An established business was coordinating technicians across regions using disconnected tools, which made planning and reporting painful.
+  // ## Lessons Learned
+  // - Simple language and clear step labels matter as much as visual polish
+  // - Performance wins are often the fastest path to better conversion`,
+  //   },
+  //   {
+  //     slug: "field-ops-dashboard",
+  //     title: "Field Ops Dashboard",
+  //     summary:
+  //       "Internal operations dashboard to plan schedules and track job completion for a service team.",
+  //     category: "Product Iteration",
+  //     role: "Part-time product engineer",
+  //     stack: ["Next.js", "React Query", "PostgreSQL", "shadcn/ui"],
+  //     outcomes: [
+  //       "Reduced weekly scheduling admin time",
+  //       "Unified reporting from multiple spreadsheets",
+  //       "Enabled safer release cycles with feature flags",
+  //     ],
+  //     images: ["/projects/field-ops-dashboard.svg"],
+  //     caseStudy: `## Overview
+  // An established business was coordinating technicians across regions using disconnected tools, which made planning and reporting painful.
 
-## Problem
-Managers were handling planning in spreadsheets and messaging tools, causing duplicate work, stale information, and unclear ownership.
+  // ## Problem
+  // Managers were handling planning in spreadsheets and messaging tools, causing duplicate work, stale information, and unclear ownership.
 
-## Approach
-- Designed a compact dashboard focused on weekly planning and job state
-- Introduced clear status models with role-based actions
-- Incrementally migrated from spreadsheets to a shared source of truth
-- Built release checkpoints to avoid disrupting day-to-day operations
+  // ## Approach
+  // - Designed a compact dashboard focused on weekly planning and job state
+  // - Introduced clear status models with role-based actions
+  // - Incrementally migrated from spreadsheets to a shared source of truth
+  // - Built release checkpoints to avoid disrupting day-to-day operations
 
-## Outcome
-The team moved from reactive updates to a predictable weekly planning rhythm, with less manual coordination and better visibility.
+  // ## Outcome
+  // The team moved from reactive updates to a predictable weekly planning rhythm, with less manual coordination and better visibility.
 
-## Lessons Learned
-- For internal tools, reliability and clarity beat visual complexity
-- Iterative rollout is critical when teams already have working habits`,
-  },
+  // ## Lessons Learned
+  // - For internal tools, reliability and clarity beat visual complexity
+  // - Iterative rollout is critical when teams already have working habits`,
+  //   },
   {
     slug: "studio-membership-site",
     title: "Studio Membership Site",
